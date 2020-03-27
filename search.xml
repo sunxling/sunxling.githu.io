@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>SDN实验</title>
-    <url>/3BE3SHR/</url>
+    <title>Untitled</title>
+    <url>/183JW5M/</url>
+    <content><![CDATA[
+]]></content>
+  </entry>
+  <entry>
+    <title>实验一 Mininet搭建自定义网络</title>
+    <url>/3NZS4HV/</url>
     <content><![CDATA[<p>写在正文之前：</p>
 <p>同事的一个项目，有幸借此学习了一点新知识。</p>
-<p>这个实验只是入门级，非常简单，仅限于熟悉SDN环境，了解基本命令，所以设计的傻瓜版。</p>
-<p>目前网络上已经有了Web版，设计得更加丰富。</p>
+<p>此系列实验只是入门级，非常简单，仅限于熟悉SDN环境，了解基本命令，所以设计的傻瓜版。</p>
+<p>目前网络上已经有了Web版SDN实验平台，设计得更加丰富。</p>
 <a id="more"></a>
-<h1 id="软件定义网络sdn实验">软件定义网络（SDN）实验</h1>
 <h2 id="实验一-mininet搭建自定义网络">实验一 Mininet搭建自定义网络</h2>
 <h3 id="实验目的">实验目的</h3>
 <p>熟悉并掌握Mininet和Ryu的启动方式，熟悉Pycharm编辑器的使用，使用Mininet自定义拓扑三种实现方式：命令行创建、Python脚本编写、交互式界面创建。</p>
@@ -41,39 +46,39 @@
 <p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mn --topo linear,4</span><br></pre></td></tr></table></figure></p>
 <p>​ ② 输出结果：</p>
 <figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsMckMhk.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsMckMhk.jpg" alt=""><figcaption>img</figcaption>
 </figure>
 <p>​ 可在mininet&gt;后输入一些命令，查看创建的拓扑情况</p>
 <ul>
 <li><p>nodes：查看网络中的节点</p>
 <figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsZH5bqr.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsZH5bqr.jpg" alt=""><figcaption>img</figcaption>
 </figure></li>
 <li><p>net：查看链接信息</p>
 <figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsE2wjQf.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsE2wjQf.jpg" alt=""><figcaption>img</figcaption>
 </figure></li>
 <li><p>links：查看链路的健壮性（链路状态）</p>
 <figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsjBjCJg.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsjBjCJg.jpg" alt=""><figcaption>img</figcaption>
 </figure></li>
 <li><p>dump：查看节点信息</p>
 <figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wps07KiEB-5228475.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wps07KiEB-5228475.jpg" alt=""><figcaption>img</figcaption>
 </figure></li>
 <li><p>pingpair：验证前两个节点之间的连通性</p>
 <figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsYnZVCr.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsYnZVCr.jpg" alt=""><figcaption>img</figcaption>
 </figure></li>
 <li><p>pingall：验证所有主机的连通性</p>
 <figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsz7jo2f.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsz7jo2f.jpg" alt=""><figcaption>img</figcaption>
 </figure></li>
 <li><ol type="a">
 <li>help：查看帮助文档</li>
 </ol>
 <figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsmjkdFR.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsmjkdFR.jpg" alt=""><figcaption>img</figcaption>
 </figure></li>
 <li><p>这行exit命令退出mininet</p></li>
 </ul>
@@ -82,25 +87,25 @@
 <p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mn --topo single,4</span><br></pre></td></tr></table></figure></p>
 <p>​ ② 查看结果：</p>
 <figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsuZN10y.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsuZN10y.jpg" alt=""><figcaption>img</figcaption>
 </figure>
 <p>​ ③ 输入pingall测试节点连通性：</p>
 <figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpslW9AFy.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpslW9AFy.jpg" alt=""><figcaption>img</figcaption>
 </figure>
 <p>​ ④ 输入exit退出Mininet</p>
 <ol start="4" type="1">
 <li>树形拓扑：定义深度和扇出形成基于树的拓扑。本例：深度2，扇出4。</li>
 </ol>
 <p>① 输入命令：</p>
-<p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mn --topo tree,depth&#x3D;2,fanout&#x3D;4</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mn --topo tree,depth=2,fanout=4</span><br></pre></td></tr></table></figure></p>
 <p>② 查看结果：</p>
 <figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsJ2B2N6.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsJ2B2N6.jpg" alt=""><figcaption>img</figcaption>
 </figure>
 <p>③ 输入pingall测试节点连通性</p>
 <figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsGKN8tj.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsGKN8tj.jpg" alt=""><figcaption>img</figcaption>
 </figure>
 <p>④ 输入exit退出Mininet</p></li>
 <li><p>使用Python脚本编写拓扑</p>
@@ -110,30 +115,30 @@
 <p>③ 右键点击左侧Project框中B0199，选择New-&gt;Python File，建立一个Python文件，名为：mytopo.py</p>
 <p>④ 选择python解释器为Python2.7版本：File--&gt;Default Settings--&gt;Project Interpreter</p>
 <p>⑤ 在文件中输入下列代码</p>
-<p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from mininet.net import Mininet</span><br><span class="line">from mininet.topo import Topo</span><br><span class="line">from mininet.node import RemoteController, CPULimitedHost</span><br><span class="line">from mininet.link import TCLink</span><br><span class="line">from mininet.util import dumpNodeConnections</span><br><span class="line"></span><br><span class="line">class MyTopo(Topo):</span><br><span class="line">  &quot;Simple topology example.&quot;</span><br><span class="line"></span><br><span class="line">  def __init__(self):</span><br><span class="line">  	&quot;Create custom topo.&quot;</span><br><span class="line"></span><br><span class="line">		# Initialize topology</span><br><span class="line">		Topo.__init__(self)</span><br><span class="line"></span><br><span class="line">		# Add hosts and switches</span><br><span class="line">		h2 &#x3D; self.addHost(&#39;h2&#39;)</span><br><span class="line">		h3 &#x3D; self.addHost(&#39;h3&#39;)</span><br><span class="line">		h4 &#x3D; self.addHost(&#39;h4&#39;)</span><br><span class="line">		s1 &#x3D; self.addSwitch(&#39;s1&#39;)</span><br><span class="line">		s2 &#x3D; self.addSwitch(&#39;s2&#39;)</span><br><span class="line">		</span><br><span class="line">		# Add links</span><br><span class="line">		self.addLink(s1,s2,1,1)</span><br><span class="line">		self.addLink(s1,h1,2,1)</span><br><span class="line">		self.addLink(s1,h2,3,1)</span><br><span class="line">		self.addLink(s2,h4,3,1)</span><br><span class="line"></span><br><span class="line">topos &#x3D; &#123;&quot;mytopo&quot;: (lambda: MyTopo())&#125;</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from mininet.net import Mininet</span><br><span class="line">from mininet.topo import Topo</span><br><span class="line">from mininet.node import RemoteController, CPULimitedHost</span><br><span class="line">from mininet.link import TCLink</span><br><span class="line">from mininet.util import dumpNodeConnections</span><br><span class="line"></span><br><span class="line">class MyTopo(Topo):</span><br><span class="line">  "Simple topology example."</span><br><span class="line"></span><br><span class="line">  def __init__(self):</span><br><span class="line">  	"Create custom topo."</span><br><span class="line"></span><br><span class="line">		# Initialize topology</span><br><span class="line">		Topo.__init__(self)</span><br><span class="line"></span><br><span class="line">		# Add hosts and switches</span><br><span class="line">		h2 = self.addHost('h2')</span><br><span class="line">		h3 = self.addHost('h3')</span><br><span class="line">		h4 = self.addHost('h4')</span><br><span class="line">		s1 = self.addSwitch('s1')</span><br><span class="line">		s2 = self.addSwitch('s2')</span><br><span class="line">		</span><br><span class="line">		# Add links</span><br><span class="line">		self.addLink(s1,s2,1,1)</span><br><span class="line">		self.addLink(s1,h1,2,1)</span><br><span class="line">		self.addLink(s1,h2,3,1)</span><br><span class="line">		self.addLink(s2,h4,3,1)</span><br><span class="line"></span><br><span class="line">topos = {"mytopo": (lambda: MyTopo())}</span><br></pre></td></tr></table></figure></p>
 <p>⑥ 运行成功后保存。</p>
 <p>如出现找不到mininet模块错误，则加入import sys和sys.path.append('/home/zq/mininet')两行代码即可，其中路径可根据具体mininet安装目录修改。</p>
 <p>（2）启动ryu</p>
 <p>​ ① 使用快捷键Ctrl+Alt+t打开一个Term窗口，此窗口在下文中称为ryu窗口。</p>
 <p>​ ② 进入ryu安装目录下子目录：</p>
-<p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd ryu&#x2F;build&#x2F;lib.linux-x86_64-2.7&#x2F;ryu&#x2F;app</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd ryu/build/lib.linux-x86_64-2.7/ryu/app</span><br></pre></td></tr></table></figure></p>
 <p>​ ③ 输入命令：</p>
 <p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo ryu-manager  simple_switch.py</span><br></pre></td></tr></table></figure></p>
 <p>如出现下面提示，则说明ryu已正常运行。</p>
 <figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpseoUZrN.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpseoUZrN.jpg" alt=""><figcaption>img</figcaption>
 </figure>
 <p>（3）启动Mininet</p>
 <p>​ ① 进入mininet窗口</p>
 <p>​ ② 执行命令：</p>
-<p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mn --custom &#x2F;home&#x2F;zq&#x2F;B0199&#x2F;mytopo.py --topo mytopo --controller&#x3D;remote,ip&#x3D;127.0.0.1,port&#x3D;6633</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mn --custom /home/zq/B0199/mytopo.py --topo mytopo --controller=remote,ip=127.0.0.1,port=6633</span><br></pre></td></tr></table></figure></p>
 <p>​ ③ 输出结果：</p>
 <figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsWWlZvf.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsWWlZvf.jpg" alt=""><figcaption>img</figcaption>
 </figure>
 <p>​ ④ 输入pingall测试节点连通性</p>
 <figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsS3uHBz.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsS3uHBz.jpg" alt=""><figcaption>img</figcaption>
 </figure>
 <p>​ ⑤ 在mininet窗口使用exit退出Mininet</p>
 <p>​ ⑥ 在ryu窗口使用Ctrl+c退出ryu，并关闭该Cterm窗口</p></li>
@@ -149,31 +154,34 @@
 </ol>
 <p>​ ① 输入net查看当前链路连接</p>
 <figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wps2ZRKiN.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wps2ZRKiN.jpg" alt=""><figcaption>img</figcaption>
 </figure>
 <p>​ ② 添加主机：</p>
 <p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mininet&gt;py net.addHo</span><br></pre></td></tr></table></figure></p>
 <p>​ ③ 给交换机s1添加端口eth3：</p>
-<p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mininet&gt;  py s1.attach(&quot;s1-eth3&quot;)</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mininet&gt;  py s1.attach("s1-eth3")</span><br></pre></td></tr></table></figure></p>
 <p>​ ④ 添加链路：</p>
-<p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mininet&gt; py net.addLink(s1,net.get(&quot;h3&quot;))</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mininet&gt; py net.addLink(s1,net.get("h3"))</span><br></pre></td></tr></table></figure></p>
 <p>​ 出现以下提示：</p>
 <figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpshWWbUL.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpshWWbUL.jpg" alt=""><figcaption>img</figcaption>
 </figure>
 <p>​ ⑤ 给h3添加IP：</p>
-<p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mininet&gt; py net.get(&quot;h3&quot;).cmd(&quot;ifconfig h3-eth0 10.0.0.3&quot;)</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mininet&gt; py net.get("h3").cmd("ifconfig h3-eth0 10.0.0.3")</span><br></pre></td></tr></table></figure></p>
 <p>​ ⑥ 查看验证：</p>
 <figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsnapNWv.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsnapNWv.jpg" alt=""><figcaption>img</figcaption>
 </figure>
 <figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsFnl4WW.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsFnl4WW.jpg" alt=""><figcaption>img</figcaption>
 </figure>
 <p>⑦ exit退出Mininet</p>
 <p>## 实验二 流表应用</p></li>
 </ol>
-]]></content>
+<svg style="display: none" id="MJX-SVG-global-cache"><defs></defs></svg>]]></content>
+      <categories>
+        <category>SDN实验</category>
+      </categories>
   </entry>
   <entry>
     <title>test1</title>
