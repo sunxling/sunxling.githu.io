@@ -12,46 +12,43 @@
 
   <link rel="shortcut icon" href="/images/favicon.png">
   <link rel="alternate" href="/atom.xml" title="xling的博客">
-  <meta name="description" content="写在正文之前： 同事的一个项目，有幸借此学习了一点新知识。 这个实验只是入门级，非常简单，仅限于熟悉SDN环境，了解基本命令，所以设计的傻瓜版。 目前网络上已经有了Web版，设计得更加丰富。">
+  <meta name="description" content="写在正文之前： 同事的一个项目，有幸借此学习了一点新知识。 这个实验只是入门级，非常简单，仅限于熟悉SDN环境，了解基本命令，所以设计的傻瓜版。 目前网络上已经有了Web版，设计得更加丰富。 软件定义网络（SDN）实验 实验一 Mininet搭建自定义网络 实验目的 熟悉并掌握Mininet和Ryu的启动方式，熟悉Pycharm编辑器的使用，使用Mininet自定义拓扑三种实现方式：命令行创建、P">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SDN实验">
 <meta property="og:url" content="http://sunxling.gitee.io/3BE3SHR/">
 <meta property="og:site_name" content="xling的博客">
-<meta property="og:description" content="写在正文之前： 同事的一个项目，有幸借此学习了一点新知识。 这个实验只是入门级，非常简单，仅限于熟悉SDN环境，了解基本命令，所以设计的傻瓜版。 目前网络上已经有了Web版，设计得更加丰富。">
+<meta property="og:description" content="写在正文之前： 同事的一个项目，有幸借此学习了一点新知识。 这个实验只是入门级，非常简单，仅限于熟悉SDN环境，了解基本命令，所以设计的傻瓜版。 目前网络上已经有了Web版，设计得更加丰富。 软件定义网络（SDN）实验 实验一 Mininet搭建自定义网络 实验目的 熟悉并掌握Mininet和Ryu的启动方式，熟悉Pycharm编辑器的使用，使用Mininet自定义拓扑三种实现方式：命令行创建、P">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsMckMhk.jpg">
-<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsZH5bqr.jpg">
-<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsE2wjQf.jpg">
-<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsjBjCJg.jpg">
-<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wps07KiEB-5228475.jpg">
-<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsYnZVCr.jpg">
-<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsz7jo2f.jpg">
-<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsmjkdFR.jpg">
-<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsuZN10y.jpg">
-<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpslW9AFy.jpg">
-<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsJ2B2N6.jpg">
-<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsGKN8tj.jpg">
-<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpseoUZrN.jpg">
-<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsWWlZvf.jpg">
-<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsS3uHBz.jpg">
-<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wps2ZRKiN.jpg">
-<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpshWWbUL.jpg">
-<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsnapNWv.jpg">
-<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsFnl4WW.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/images/wpsMckMhk.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/images/wpsZH5bqr.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/images/wpsE2wjQf.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/images/wpsjBjCJg.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/images/wps07KiEB-5228475.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/images/wpsYnZVCr.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/images/wpsz7jo2f.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/images/wpsmjkdFR.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/images/wpsuZN10y.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/images/wpslW9AFy.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/images/wpsJ2B2N6.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/images/wpsGKN8tj.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/images/wpseoUZrN.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/images/wpsWWlZvf.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/images/wpsS3uHBz.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/images/wps2ZRKiN.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/images/wpshWWbUL.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/images/wpsnapNWv.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/images/wpsFnl4WW.jpg">
 <meta property="article:published_time" content="2020-03-26T12:59:06.837Z">
-<meta property="article:modified_time" content="2020-03-27T11:07:09.238Z">
+<meta property="article:modified_time" content="2020-03-27T11:15:46.520Z">
 <meta property="article:author" content="sunxl">
 <meta property="article:tag" content="hexo">
 <meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsMckMhk.jpg">
+<meta name="twitter:image" content="http://sunxling.gitee.io/images/wpsMckMhk.jpg">
 
   <meta name="format-detection" content="telephone=no,email=no">
   <meta name="theme-color" content="#9C27B0">
-  <meta name="description" content="写在正文之前：
-同事的一个项目，有幸借此学习了一点新知识。
-这个实验只是入门级，非常简单，仅限于熟悉SDN环境，了解基本命令，所以设计的傻瓜版。
-目前网络上已经有了Web版，设计得更加丰富。">
+  <meta name="description" content="Communication Network notes">
   <meta name="keywords" content="">
 
   <meta name="mobile-web-app-capable" content="yes">
@@ -65,7 +62,7 @@
 
   
     <meta property="article:published_time" content="Thu Mar 26 2020 20:59:06 GMT+0800">
-    <meta property="article:modified_time" content="Fri Mar 27 2020 19:07:09 GMT+0800">
+    <meta property="article:modified_time" content="Fri Mar 27 2020 19:15:46 GMT+0800">
   
 
   
@@ -378,7 +375,7 @@ mjx-container + br {
       </div>
       <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
         
-        <a class="mdui-ripple sidebar_archives-link" href="/archives/2020/03/">三月 2020<span class="mdui-ripple sidebar_archives-count">7</span></a>
+        <a class="mdui-ripple sidebar_archives-link" href="/archives/2020/03/">三月 2020<span class="mdui-ripple sidebar_archives-count">6</span></a>
         
       </div>
     </div>
@@ -453,7 +450,7 @@ mjx-container + br {
   <style>#main article .mdui-card-content .center-block{display:block!important;margin-right:auto!important;margin-left:auto!important}</style>
   <article class="mdui-card mdui-m-b-5">
     <header class="mdui-card-media">
-      <img src="/images/random/material-9.png" style="max-height: 240px;">
+      <img src="/images/random/material-2.png" style="max-height: 240px;">
       <div class="mdui-card-media-covered">
         <div class="mdui-card-primary">
           <div class="mdui-card-primary-title">SDN实验</div>
@@ -508,7 +505,7 @@ mjx-container + br {
 <p>同事的一个项目，有幸借此学习了一点新知识。</p>
 <p>这个实验只是入门级，非常简单，仅限于熟悉SDN环境，了解基本命令，所以设计的傻瓜版。</p>
 <p>目前网络上已经有了Web版，设计得更加丰富。</p>
-<a id="more"></a>
+<h1 id="软件定义网络sdn实验">软件定义网络（SDN）实验</h1>
 <h2 id="实验一-mininet搭建自定义网络">实验一 Mininet搭建自定义网络</h2>
 <h3 id="实验目的">实验目的</h3>
 <p>熟悉并掌握Mininet和Ryu的启动方式，熟悉Pycharm编辑器的使用，使用Mininet自定义拓扑三种实现方式：命令行创建、Python脚本编写、交互式界面创建。</p>
@@ -541,39 +538,39 @@ mjx-container + br {
 <p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mn --topo linear,4</span><br></pre></td></tr></table></figure></p>
 <p>​ ② 输出结果：</p>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsMckMhk.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wpsMckMhk.jpg" alt="" /><figcaption>img</figcaption>
 </figure>
 <p>​ 可在mininet&gt;后输入一些命令，查看创建的拓扑情况</p>
 <ul>
 <li><p>nodes：查看网络中的节点</p>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsZH5bqr.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wpsZH5bqr.jpg" alt="" /><figcaption>img</figcaption>
 </figure></li>
 <li><p>net：查看链接信息</p>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsE2wjQf.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wpsE2wjQf.jpg" alt="" /><figcaption>img</figcaption>
 </figure></li>
 <li><p>links：查看链路的健壮性（链路状态）</p>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsjBjCJg.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wpsjBjCJg.jpg" alt="" /><figcaption>img</figcaption>
 </figure></li>
 <li><p>dump：查看节点信息</p>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wps07KiEB-5228475.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wps07KiEB-5228475.jpg" alt="" /><figcaption>img</figcaption>
 </figure></li>
 <li><p>pingpair：验证前两个节点之间的连通性</p>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsYnZVCr.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wpsYnZVCr.jpg" alt="" /><figcaption>img</figcaption>
 </figure></li>
 <li><p>pingall：验证所有主机的连通性</p>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsz7jo2f.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wpsz7jo2f.jpg" alt="" /><figcaption>img</figcaption>
 </figure></li>
 <li><ol type="a">
 <li>help：查看帮助文档</li>
 </ol>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsmjkdFR.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wpsmjkdFR.jpg" alt="" /><figcaption>img</figcaption>
 </figure></li>
 <li><p>这行exit命令退出mininet</p></li>
 </ul>
@@ -582,11 +579,11 @@ mjx-container + br {
 <p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mn --topo single,4</span><br></pre></td></tr></table></figure></p>
 <p>​ ② 查看结果：</p>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsuZN10y.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wpsuZN10y.jpg" alt="" /><figcaption>img</figcaption>
 </figure>
 <p>​ ③ 输入pingall测试节点连通性：</p>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpslW9AFy.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wpslW9AFy.jpg" alt="" /><figcaption>img</figcaption>
 </figure>
 <p>​ ④ 输入exit退出Mininet</p>
 <ol start="4" type="1">
@@ -596,11 +593,11 @@ mjx-container + br {
 <p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mn --topo tree,depth&#x3D;2,fanout&#x3D;4</span><br></pre></td></tr></table></figure></p>
 <p>② 查看结果：</p>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsJ2B2N6.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wpsJ2B2N6.jpg" alt="" /><figcaption>img</figcaption>
 </figure>
 <p>③ 输入pingall测试节点连通性</p>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsGKN8tj.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wpsGKN8tj.jpg" alt="" /><figcaption>img</figcaption>
 </figure>
 <p>④ 输入exit退出Mininet</p></li>
 <li><p>使用Python脚本编写拓扑</p>
@@ -621,7 +618,7 @@ mjx-container + br {
 <p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ryu-manager  simple_switch.py</span><br></pre></td></tr></table></figure></p>
 <p>如出现下面提示，则说明ryu已正常运行。</p>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpseoUZrN.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wpseoUZrN.jpg" alt="" /><figcaption>img</figcaption>
 </figure>
 <p>（3）启动Mininet</p>
 <p>​ ① 进入mininet窗口</p>
@@ -629,11 +626,11 @@ mjx-container + br {
 <p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mn --custom &#x2F;home&#x2F;zq&#x2F;B0199&#x2F;mytopo.py --topo mytopo --controller&#x3D;remote,ip&#x3D;127.0.0.1,port&#x3D;6633</span><br></pre></td></tr></table></figure></p>
 <p>​ ③ 输出结果：</p>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsWWlZvf.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wpsWWlZvf.jpg" alt="" /><figcaption>img</figcaption>
 </figure>
 <p>​ ④ 输入pingall测试节点连通性</p>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsS3uHBz.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wpsS3uHBz.jpg" alt="" /><figcaption>img</figcaption>
 </figure>
 <p>​ ⑤ 在mininet窗口使用exit退出Mininet</p>
 <p>​ ⑥ 在ryu窗口使用Ctrl+c退出ryu，并关闭该Cterm窗口</p></li>
@@ -649,7 +646,7 @@ mjx-container + br {
 </ol>
 <p>​ ① 输入net查看当前链路连接</p>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wps2ZRKiN.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wps2ZRKiN.jpg" alt="" /><figcaption>img</figcaption>
 </figure>
 <p>​ ② 添加主机：</p>
 <p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mininet&gt;py net.addHo</span><br></pre></td></tr></table></figure></p>
@@ -659,18 +656,19 @@ mjx-container + br {
 <p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mininet&gt; py net.addLink(s1,net.get(&quot;h3&quot;))</span><br></pre></td></tr></table></figure></p>
 <p>​ 出现以下提示：</p>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpshWWbUL.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wpshWWbUL.jpg" alt="" /><figcaption>img</figcaption>
 </figure>
 <p>​ ⑤ 给h3添加IP：</p>
 <p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mininet&gt; py net.get(&quot;h3&quot;).cmd(&quot;ifconfig h3-eth0 10.0.0.3&quot;)</span><br></pre></td></tr></table></figure></p>
 <p>​ ⑥ 查看验证：</p>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsnapNWv.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wpsnapNWv.jpg" alt="" /><figcaption>img</figcaption>
 </figure>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsFnl4WW.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wpsFnl4WW.jpg" alt="" /><figcaption>img</figcaption>
 </figure>
-<p>⑦ exit退出Mininet</p></li>
+<p>⑦ exit退出Mininet</p>
+<p>## 实验二 流表应用</p></li>
 </ol>
 
         

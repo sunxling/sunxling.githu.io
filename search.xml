@@ -7,7 +7,7 @@
 <p>同事的一个项目，有幸借此学习了一点新知识。</p>
 <p>这个实验只是入门级，非常简单，仅限于熟悉SDN环境，了解基本命令，所以设计的傻瓜版。</p>
 <p>目前网络上已经有了Web版，设计得更加丰富。</p>
-<a id="more"></a>
+<h1 id="软件定义网络sdn实验">软件定义网络（SDN）实验</h1>
 <h2 id="实验一-mininet搭建自定义网络">实验一 Mininet搭建自定义网络</h2>
 <h3 id="实验目的">实验目的</h3>
 <p>熟悉并掌握Mininet和Ryu的启动方式，熟悉Pycharm编辑器的使用，使用Mininet自定义拓扑三种实现方式：命令行创建、Python脚本编写、交互式界面创建。</p>
@@ -40,39 +40,39 @@
 <p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mn --topo linear,4</span><br></pre></td></tr></table></figure></p>
 <p>​ ② 输出结果：</p>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsMckMhk.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wpsMckMhk.jpg" alt="" /><figcaption>img</figcaption>
 </figure>
 <p>​ 可在mininet&gt;后输入一些命令，查看创建的拓扑情况</p>
 <ul>
 <li><p>nodes：查看网络中的节点</p>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsZH5bqr.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wpsZH5bqr.jpg" alt="" /><figcaption>img</figcaption>
 </figure></li>
 <li><p>net：查看链接信息</p>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsE2wjQf.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wpsE2wjQf.jpg" alt="" /><figcaption>img</figcaption>
 </figure></li>
 <li><p>links：查看链路的健壮性（链路状态）</p>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsjBjCJg.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wpsjBjCJg.jpg" alt="" /><figcaption>img</figcaption>
 </figure></li>
 <li><p>dump：查看节点信息</p>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wps07KiEB-5228475.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wps07KiEB-5228475.jpg" alt="" /><figcaption>img</figcaption>
 </figure></li>
 <li><p>pingpair：验证前两个节点之间的连通性</p>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsYnZVCr.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wpsYnZVCr.jpg" alt="" /><figcaption>img</figcaption>
 </figure></li>
 <li><p>pingall：验证所有主机的连通性</p>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsz7jo2f.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wpsz7jo2f.jpg" alt="" /><figcaption>img</figcaption>
 </figure></li>
 <li><ol type="a">
 <li>help：查看帮助文档</li>
 </ol>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsmjkdFR.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wpsmjkdFR.jpg" alt="" /><figcaption>img</figcaption>
 </figure></li>
 <li><p>这行exit命令退出mininet</p></li>
 </ul>
@@ -81,11 +81,11 @@
 <p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mn --topo single,4</span><br></pre></td></tr></table></figure></p>
 <p>​ ② 查看结果：</p>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsuZN10y.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wpsuZN10y.jpg" alt="" /><figcaption>img</figcaption>
 </figure>
 <p>​ ③ 输入pingall测试节点连通性：</p>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpslW9AFy.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wpslW9AFy.jpg" alt="" /><figcaption>img</figcaption>
 </figure>
 <p>​ ④ 输入exit退出Mininet</p>
 <ol start="4" type="1">
@@ -95,11 +95,11 @@
 <p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mn --topo tree,depth&#x3D;2,fanout&#x3D;4</span><br></pre></td></tr></table></figure></p>
 <p>② 查看结果：</p>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsJ2B2N6.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wpsJ2B2N6.jpg" alt="" /><figcaption>img</figcaption>
 </figure>
 <p>③ 输入pingall测试节点连通性</p>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsGKN8tj.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wpsGKN8tj.jpg" alt="" /><figcaption>img</figcaption>
 </figure>
 <p>④ 输入exit退出Mininet</p></li>
 <li><p>使用Python脚本编写拓扑</p>
@@ -120,7 +120,7 @@
 <p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo ryu-manager  simple_switch.py</span><br></pre></td></tr></table></figure></p>
 <p>如出现下面提示，则说明ryu已正常运行。</p>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpseoUZrN.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wpseoUZrN.jpg" alt="" /><figcaption>img</figcaption>
 </figure>
 <p>（3）启动Mininet</p>
 <p>​ ① 进入mininet窗口</p>
@@ -128,11 +128,11 @@
 <p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mn --custom &#x2F;home&#x2F;zq&#x2F;B0199&#x2F;mytopo.py --topo mytopo --controller&#x3D;remote,ip&#x3D;127.0.0.1,port&#x3D;6633</span><br></pre></td></tr></table></figure></p>
 <p>​ ③ 输出结果：</p>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsWWlZvf.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wpsWWlZvf.jpg" alt="" /><figcaption>img</figcaption>
 </figure>
 <p>​ ④ 输入pingall测试节点连通性</p>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsS3uHBz.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wpsS3uHBz.jpg" alt="" /><figcaption>img</figcaption>
 </figure>
 <p>​ ⑤ 在mininet窗口使用exit退出Mininet</p>
 <p>​ ⑥ 在ryu窗口使用Ctrl+c退出ryu，并关闭该Cterm窗口</p></li>
@@ -148,7 +148,7 @@
 </ol>
 <p>​ ① 输入net查看当前链路连接</p>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wps2ZRKiN.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wps2ZRKiN.jpg" alt="" /><figcaption>img</figcaption>
 </figure>
 <p>​ ② 添加主机：</p>
 <p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mininet&gt;py net.addHo</span><br></pre></td></tr></table></figure></p>
@@ -158,18 +158,19 @@
 <p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mininet&gt; py net.addLink(s1,net.get(&quot;h3&quot;))</span><br></pre></td></tr></table></figure></p>
 <p>​ 出现以下提示：</p>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpshWWbUL.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wpshWWbUL.jpg" alt="" /><figcaption>img</figcaption>
 </figure>
 <p>​ ⑤ 给h3添加IP：</p>
 <p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mininet&gt; py net.get(&quot;h3&quot;).cmd(&quot;ifconfig h3-eth0 10.0.0.3&quot;)</span><br></pre></td></tr></table></figure></p>
 <p>​ ⑥ 查看验证：</p>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsnapNWv.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wpsnapNWv.jpg" alt="" /><figcaption>img</figcaption>
 </figure>
 <figure>
-<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsFnl4WW.jpg" alt="" /><figcaption>img</figcaption>
+<img src="../images/wpsFnl4WW.jpg" alt="" /><figcaption>img</figcaption>
 </figure>
-<p>⑦ exit退出Mininet</p></li>
+<p>⑦ exit退出Mininet</p>
+<p>## 实验二 流表应用</p></li>
 </ol>
 ]]></content>
   </entry>
@@ -190,775 +191,6 @@
       <tags>
         <tag>笔记</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>第四章 互联网</title>
-    <url>/3P2VH42/</url>
-    <content><![CDATA[<h1 id="第四章-互联网">第四章 互联网</h1>
-<h2 id="参考教材第四章">## 参考教材第四章</h2>
-<h1 id="提纲">提纲</h1>
-<ul>
-<li><font color=[0,104,139]><em>网际互联协议IP</em></font>
-<ul>
-<li><font color=[0,104,139]><em>IP编址</em></font></li>
-<li>IP数据报的格式</li>
-<li>IP分组的转发</li>
-</ul></li>
-<li>IP路由协议</li>
-<li><h2 id="多协议标签交换mpls">多协议标签交换MPLS</h2></li>
-</ul>
-<h1 id="ip地址的引入">IP地址的引入</h1>
-<ul>
-<li>实现网际互连必须使用统一的地址形式
-<ul>
-<li>没有可以直接使用的物理地址（数据链路层）系统，也不可能对现有链路技术的物理地址进行修改</li>
-<li>必须在更高的层次上（网络层）来实现地址统一</li>
-</ul></li>
-<li>IP地址的引入
-<ul>
-<li>在TCP/IP体系结构中，实现不同网络的网际互连是通过IP协议完成的</li>
-<li>为解决互联网络（Internet）中的寻址问题，IP协议定义了在全网唯一的通用32位地址格式——IP地址</li>
-</ul></li>
-<li><h2 id="ip地址在网络层上屏蔽了异种网络之间物理地址等特性的差异利于网间通信的实现">IP地址在网络层上屏蔽了异种网络之间物理地址等特性的差异，利于网间通信的实现</h2>
-<h1 id="ip地址和物理地址">IP地址和物理地址</h1></li>
-<li>IP地址：是在网络层对用户终端的标识，由软件定义，可以实现全局范围内寻址。采用全局通用的地址格式，32bit，由网络号和主机号构成；是一种层次地址，携带对象的位置信息</li>
-<li>物理地址：是在数据链路层对用户终端的标识，由网卡定义，可以实现物理子网内寻址。例：在局域网中的MAC地址，48bit，是一种平面地址，不携带对象的位置信息。</li>
-<li><h2 id="存在两种地址的意义在将各种物理子网互联时通过ip地址可以实现物理地址的统一向上层屏蔽底层的差异">存在两种地址的意义：在将各种物理子网互联时，通过IP地址可以实现物理地址的统一，向上层屏蔽底层的差异。</h2>
-<div data-align="center">
-<p><img src="mypictures/IP地址和MAC地址的寻址范围.png" width=1000></p>
-</div></li>
-</ul>
-<h1 id="ipv4编址方式--传统的分类地址一">IPv4编址方式--传统的分类地址（一）</h1>
-<ul>
-<li>IP地址长度为32bit，包括网络号（网络前缀）和主机号</li>
-<li>不同的地址类型定义了地址中网络号和主机号所占的位数</li>
-<li>利用地址类型，可快速区分出地址中的网络号和主机号</li>
-</ul>
-<div data-align="center">
-<p><img src="mypictures/IP地址格式.png" width=800></p>
-</div>
-<h1 id="ipv4编址方式--传统的分类地址三">IPv4编址方式--传统的分类地址（三）</h1>
-<ul>
-<li>IP地址的表示法：“点分十进制表示法” 采用4个小数点分开的十进制整数，每个整数对应于地址中的一个字节。如，IP地址0xC0020304可表示为192.2.3.4。</li>
-<li>每个地址类的点分十进制范围
-<ul>
-<li>A 1.XXX.XXX.XXX~126.xxx.xxx.xxx</li>
-<li>B 128.1.xxx.xxx~191.254.xxx.xxx</li>
-<li><h2 id="c-192.0.1.xxx223.255.254.xxx">C 192.0.1.xxx~223.255.254.xxx</h2>
-<h1 id="ipv4编址方式--传统的分类地址四">IPv4编址方式--传统的分类地址（四）</h1></li>
-</ul></li>
-<li>在IP地址中，有些地址并不是用来标识网络连接的，它们具有特殊的意义。</li>
-</ul>
-<div data-align="center">
-<p><img src="mypictures/特殊IP地址.png" width=600></p>
-</div>
-<h1 id="ipv4编址方式--子网划分一">IPv4编址方式--子网划分（一）</h1>
-<ul>
-<li>分类地址（classfuladdess）的缺陷：
-<ul>
-<li>地址分配不够灵活</li>
-<li>地址空间消耗速度快，……</li>
-</ul></li>
-<li>子网划分技术：
-<ul>
-<li>将较大的分类地址空间划分成多个小的子网</li>
-<li>划分子网的方法是将IP地址的主机号部分分成两部分，高比特位部分用来标识子网，剩余部分仍然作为主机号。借用的主机比特数据不同，得到的子网的大小也不同。</li>
-</ul></li>
-</ul>
-<h1 id="ipv4编址方式--子网划分三">IPv4编址方式--子网划分（三）</h1>
-<ul>
-<li>子网掩码
-<ul>
-<li>为了区分一个IP地址的网络部分（网络＋子网）和主机部分，采用了子网掩码的技术。</li>
-<li>子网掩码是一个32位的二进制数，它指定了子网标识和主机号的分界点，即对应IP地址网络号和子网标识的位全部置1，主机号部分全部置0。</li>
-</ul></li>
-</ul>
-<div data-align="center">
-<p><img src="mypictures/子网掩码定义.png" width=500></p>
-</div>
-<h1 id="ipv4编址方式--子网划分五">IPv4编址方式--子网划分（五）</h1>
-<ul>
-<li>如何划分子网？
-<ol type="1">
-<li>确定需要多少个子网。</li>
-<li>确定需要多少个主机号来标识每个子网上的每台主机。</li>
-<li>综合考虑子网数和子网中的主机数后，确定子网掩码。</li>
-<li>确定标识每个子网的网络号。</li>
-<li>确定每个子网上可以使用的主机号范围</li>
-</ol></li>
-</ul>
-<h1 id="ipv4编址方式--无类域间路由cidr一">IPv4编址方式--无类域间路由CIDR（一）</h1>
-<ul>
-<li>虽然划分子网方法是对IP地址结构有价值的扩充，但是它还要受到一个基本的限制：整个网络只能有一个子网掩码。因此，当用户选择了一个子网掩码(也就意味着每个子网内的主机数确定了)之后，就不能支持不同尺寸的子网了。</li>
-<li>在现实世界中，对子网的要求是不一样的，希望一个组织或网络把其分成相同大小的子部分很不现实。因此，使用固定长度的子网掩码会导致子网内IP主机地址的浪费。</li>
-</ul>
-<h1 id="ipv4编址方式--无类域间路由cidr三">IPv4编址方式--无类域间路由CIDR（三）</h1>
-<div data-align="center">
-<p><img src="mypictures/可变长子网掩码案例.png" width=700></p>
-</div>
-<h1 id="ipv4编址方式--无类域间路由cidr六">IPv4编址方式--无类域间路由CIDR（六）</h1>
-<ul>
-<li>CIDR消除了传统的A类、B类、C类地址以及划分子网的概念</li>
-<li>CIDR使用各种长度的“网络前缀”(network-prefix)来代替分类地址中的网络号和子网号。</li>
-<li>IP地址从三级编址（使用子网掩码）又回到了两级编址。IP地址=网络前缀+主机号</li>
-<li>CIDR还使用“斜线记法”(slashnotation)，它又称为CIDR记法，即在IP地址后面加上一个斜线“/”，然后写上网络前缀所占的比特数。</li>
-<li><h2 id="cidr将网络前缀都相同的连续的ip地址组成cidr地址块">CIDR将网络前缀都相同的连续的IP地址组成“CIDR地址块”。</h2>
-<h1 id="ipv4编址方式--无类域间路由cidr七">IPv4编址方式--无类域间路由CIDR（七）</h1></li>
-<li>CIDR地址块：
-<ul>
-<li>128.14.32.0/20表示的地址块共有212个地址（因为斜线后面的20是网络前缀的比特数，所以主机号的比特数是12）。</li>
-<li>在不需要指出地址块的起始地址时，也可将这样的地址块简称为“/20地址块”。</li>
-<li><h2 id="全0和全1的主机号地址一般不使用">全0和全1的主机号地址一般不使用。</h2>
-<h1 id="ipv4编址方式--无类域间路由cidr八">IPv4编址方式--无类域间路由CIDR（八）</h1></li>
-</ul></li>
-<li>例：常用的CIDR地址块</li>
-</ul>
-<div data-align="center">
-<p><img src="mypictures/CIDR地址块1.png" width=400> <img src="mypictures/CIDR地址块2.png" width=400></p>
-</div>
-<h1 id="ipv4编址方式--无类域间路由cidr十">IPv4编址方式--无类域间路由CIDR（十）</h1>
-<ul>
-<li>例1：某一单位内部有5个局域网：LAN1～LAN5，各局域网上的主机数分别为：90、180、15、27、46，该单位分配到的IP地址块为33.133.118.0/23 （1）试给出每一个局域网的网络地址。 （2）判断IP地址为33.133.119.121的主机属于哪个局域网。</li>
-</ul>
-<h1 id="ipv4编址方式--无类域间路由cidr十二">IPv4编址方式--无类域间路由CIDR（十二）</h1>
-<ul>
-<li>例2：某一单位内部有4个局域网：LAN1～LAN4，各局域网上的主机数分别为：200、500、1000、2000，该单位分配到的IP地址块为160.1.0.0/20，试给出每一个局域网的网络地址。</li>
-</ul>
-<h1 id="ip协议无连接的分组转发">IP协议：无连接的分组转发</h1>
-<ul>
-<li>IP负责源到宿的主机间的数据报传递</li>
-<li><h2 id="ip层采用无连接的尽力而为的机制不能保证传输的正确性不作验证确认也不保证分组传输的顺序">IP层采用无连接的、尽力而为的机制，不能保证传输的正确性：不作验证、确认，也不保证分组传输的顺序</h2>
-<h1 id="tcpip协议中数据的封装">TCP/IP协议中数据的封装</h1></li>
-<li>IP头：网络层（IP协议）的协议控制单元</li>
-<li>传输层头：传输层（TCP/UDP）的协议控制单元</li>
-<li>净荷：承载应用层的数据，可变长度 #
-<div data-align="center">
-<p><img src="mypictures/TCP-IP协议中的数据封装.png" width=800></p>
-</div></li>
-</ul>
-<h1 id="ipv4分组头一">IPv4分组头（一）</h1>
-<ul>
-<li>版本号（Version）：IPv4和IPv6，目前的版本为4</li>
-<li>分组头的长度（HL）和分组总长度（TotalLength）
-<ul>
-<li>HL(4byte)：给出以32bit长为单位的IP分组头的长度
-<ul>
-<li>典型的IP分组头（不含选项）长度为20字节，HL=5</li>
-</ul></li>
-<li>TLEN(16bit)：以字节为单位的IP分组的总长度
-<ul>
-<li>总长度=IP分组头长度+数据区长度</li>
-<li>TLEN可表示的最大长度（即IP分组的最大长度）为65535字节</li>
-</ul></li>
-</ul></li>
-</ul>
-<h1 id="最大传输单元mtu">最大传输单元MTU</h1>
-<ul>
-<li>IP分组需要通过物理网络的帧来进行传输</li>
-<li>MTU：最大传输单元，能够封装进一个帧中的最大数据长度=&gt;物理子网不同，MTU不同，IP数据报长度＞MTU时，需要分片 #
-<div data-align="center">
-<p><img src="mypictures/MTU.png" width=800></p>
-</div></li>
-</ul>
-<h1 id="如何分片二">如何分片？（二）</h1>
-<h1 id="section"></h1>
-<div data-align="center">
-<p><img src="mypictures/如何分片.png" width=800></p>
-</div>
-<h1 id="数据报分片范例一">数据报分片范例（一）</h1>
-<p>一个数据报长度为4000字节（固定首部长度）。现在经过一个网络传送，但此网络的MTU为1500字节。试问应当划分为几个短些的数据报片？各数据报片的数据字段长度、片偏移字段和MF标志应为何数值？</p>
-<h1 id="ipv4分组头三">IPv4分组头（三）</h1>
-<ul>
-<li>协议类型（PROTOCOL）
-<ul>
-<li>8位整数，指出数据区中承载的数据所采用的高层协议</li>
-<li>协议类型的编码是预定义的：
-<ul>
-<li>TCP=6</li>
-<li>UDP=17</li>
-<li>ICMP=1</li>
-<li>OSPF=89</li>
-</ul></li>
-</ul></li>
-</ul>
-<h1 id="ipv4分组头五">IPv4分组头（五）</h1>
-<ul>
-<li>生存时间（TTL–TimeToLive，1byte）
-<ul>
-<li>用来防止IP分组在网络中出现无限循环</li>
-<li>分组产生时TTL被设置一个初值；每经过一个路由器其值都将减少；当TTL=0时，该分组将被丢弃。</li>
-<li>TTL指定的不是一个精确的时间（以hop为单位）</li>
-</ul></li>
-<li>分组头的校验和（2byte）
-<ul>
-<li>用来保护IP分组头的完整性</li>
-<li>校验和的计算和检验算法：对分组头按照16位字为单位，求其半加和，结果求反，即得到校验和。</li>
-</ul></li>
-</ul>
-<h1 id="提纲-1">提纲</h1>
-<ul>
-<li><font color=[0,104,139]><em>网际互联协议IP</em></font>
-<ul>
-<li>IP编址</li>
-<li>IP数据报的格式</li>
-<li><font color=[0,104,139]><em>IP分组的转发</em></font></li>
-</ul></li>
-<li>IP路由协议</li>
-<li><h2 id="多协议标签交换mpls-1">多协议标签交换MPLS</h2>
-<h1 id="ip分组的转发">IP分组的转发</h1></li>
-<li>IP分组的转发就是把分组放到去往终点的路由上，这就要求主机或路由器装有路由表。</li>
-<li>与路由表相关的操作包括两个部分：
-<ul>
-<li>第一部分是路由表的使用，即根据路由表进行路由选择，完成分组的转发。主机和路由器上的IP负责第一部分的工作</li>
-<li><h2 id="第二部分是路由表的建立和刷新这项工作由路由守护程序完成路由协议负责第二部分的工作">第二部分是路由表的建立和刷新，这项工作由路由守护程序完成。路由协议负责第二部分的工作。</h2>
-<h1 id="典型的路由器结构">典型的路由器结构</h1>
-<h1 id="section-1"></h1>
-div align=center&gt; <img src="mypictures/路由器的结构.png" width=800>
-</div></li>
-</ul></li>
-</ul>
-<h1 id="直接转发和间接转发">直接转发和间接转发</h1>
-<ul>
-<li>直接转发
-<ul>
-<li>转发结点与目的结点在同一个物理网络中</li>
-<li>转发中间不需要经过其他路由器</li>
-<li>分组封装在物理帧中，直接传送到目的结点</li>
-</ul></li>
-<li>间接转发
-<ul>
-<li>转发结点与目的结点不在同一个物理网络中</li>
-<li><h2 id="选路功能将根据分组的目的地址选择一个下一跳路由器并将分组转发到该下一跳路由器上">选路功能将根据分组的目的地址，选择一个下一跳路由器，并将分组转发到该下一跳路由器上</h2>
-<h1 id="ip数据报的转发流程">IP数据报的转发流程</h1></li>
-</ul></li>
-</ul>
-<ol type="1">
-<li>从收到的分组的首部提取目的IP地址D。</li>
-<li>先用各直接连接的网络的子网掩码和D逐比特相“与”，看是否和相应的网络地址匹配。若匹配，则将分组直接交付；否则就是间接交付，执行③。</li>
-<li>若路由表中有目的地址为D的特定主机路由，则将分组传送给指明的下一跳路由器；否则，执行④。</li>
-<li>对路由表中的每一行的子网掩码和D逐比特相“与”，若其结果与该行的目的网络地址匹配，则将分组传送给该行指明的下一跳路由器；否则，执行⑤。</li>
-<li>若路由表中有一个默认路由，则将分组传送给路由表中所指明的默认路由器；否则，执行⑥。</li>
-<li><h2 id="报告转发分组出错">报告转发分组出错。</h2>
-<h1 id="一个路由表的例子一">一个路由表的例子（一）</h1>
-<div data-align="center">
-<p><img src="mypictures/一个路由表的例子.png" width=800></p>
-</div>
-图中第1个表项是直接转发路由，即目的主机在该网络上，第2个表项是对主机B的特定主机路由，第3个表项是特定网络路由，最后一个表项是默认路由。</li>
-</ol>
-<h1 id="采用cidr编址后的路由查找">采用CIDR编址后的路由查找</h1>
-<ul>
-<li>采用CIDR后，IP地址中前缀（网络号的长度）不固定，可能匹配到多个转发表项
-<div data-align="center">
-<p><img src="mypictures/采用CIDR编址后的路由查找.png" width=800></p>
-</div></li>
-</ul>
-<h1 id="自治系统autonomous-system一">自治系统（Autonomous System）（一）</h1>
-<ul>
-<li>我们将整个互联网划分为许多较小的自治系统AS。</li>
-<li>一个自治系统最重要的特点就是自治系统有权自主地决定在本系统内应采用何种路由选择协议。</li>
-<li>一个自治系统内的所有网络都属于一个行政单位(例如，一个公司，一所大学，政府的一个部门，等等)来管辖。</li>
-<li><h2 id="一个自治系统的所有路由器在本自治系统内都必须是连通的">一个自治系统的所有路由器在本自治系统内都必须是连通的。</h2>
-自治系统（Autonomous System）（二） #
-<div data-align="center">
-<p><img src="mypictures/自治系统.png" width=800></p>
-</div></li>
-</ul>
-<h1 id="rip路由信息协议">RIP：路由信息协议</h1>
-<ul>
-<li>RIP–Routing Information Protocol</li>
-<li>最普通、应用最广泛的域内路由协议</li>
-<li>采用距离向量路由算法</li>
-<li>以30秒为周期更新路由信息</li>
-<li>采用转发跳数（即hop）作为费用的度量参数</li>
-<li><h2 id="rip支持的最大网络直径是15hop">RIP支持的最大网络直径是15hop</h2>
-<h1 id="距离向量选路distance-vector-routing">距离向量选路（Distance Vector Routing）</h1></li>
-<li>距离向量：即一个二元组{network，metric/cost}</li>
-<li>使用距离矢量路由协议的路由器并不了解网络的拓扑。该路由器只知道：
-<ul>
-<li>自身与目的网络之间的距离</li>
-<li><h2 id="应该往哪个方向或使用哪个接口转发数据包">应该往哪个方向或使用哪个接口转发数据包</h2>
-<h1 id="rip路由数据库的构成">RIP路由数据库的构成</h1></li>
-</ul></li>
-<li>目的地址：主机或网络的地址</li>
-<li>下一跳地址：为到达目的地，需要经过的相邻路由器的接口IP地址</li>
-<li>接口：转发报文的接口</li>
-<li>Metric值：本路由器到达目的地的开销，是一个0～15之间的整数</li>
-<li>路由时间：从路由项最后一次被修改到现在所经过的时间，路由项每次被修改时，路由时间重置为0</li>
-<li><h2 id="路由标记区分内部路由协议路由和外部路由协议路由的标记">路由标记：区分内部路由协议路由和外部路由协议路由的标记</h2>
-<h1 id="rip路由更新原则">RIP路由更新原则</h1></li>
-<li>仅和相邻的路由器交换信息。RIP规定，不相邻的路由器不交换信息。</li>
-<li>交换的信息是当前本路由器所知道的全部信息，即自己的路由表。</li>
-<li><h2 id="按固定的时间间隔30秒交换路由信息然后路由器根据收到的路由信息更新路由表另一种情况就是当网络拓扑发生变化时路由器也及时向相邻路由器通告拓扑变化后的路由信息">按固定的时间间隔(30秒)交换路由信息，然后路由器根据收到的路由信息更新路由表。另一种情况就是当网络拓扑发生变化时，路由器也及时向相邻路由器通告拓扑变化后的路由信息。</h2>
-<h1 id="rip工作过程一">RIP工作过程（一）</h1></li>
-<li>路由器刚启动
-<div data-align="center">
-<p><img src="mypictures/RIP工作过程1.png" width=800></p>
-</div></li>
-</ul>
-<h1 id="rip工作过程三">RIP工作过程（三）</h1>
-<ul>
-<li>路由收敛完成
-<div data-align="center">
-<p><img src="mypictures/RIP工作过程3.png" width=800></p>
-</div></li>
-</ul>
-<h1 id="rip更新算法举例一">RIP更新算法举例（一）</h1>
-例：一运行RIP路由协议的系统中，路由器A内部的路由表如表1所示，路由器C内部的路由表如表2所示，在某一更新时刻，路由器C将路由信息发送给A，试写出进行路由更新后路由器A中的路由表。
-<div data-align="center">
-<p><img src="mypictures/RIP更新算法举例.png" width=800></p>
-</div>
-<h1 id="rip更新算法总结">RIP更新算法总结</h1>
-收到路由器R发来的一条到网络N的路由： 1. 若本路由器中没有到该网络N的路由-》将该路由加入到本机路由表中， 2. 本路由器中有到该网络N的路由，且该路由中“下一跳”值不是R--》选择最小跳数路由 3. 本路由器中有到该网络N的路由，且该路由中“下一跳”值为R--》选择新路由 4. 上述三种情况下，如果选择新路由，注意加入新路由时“下一跳”为R，“跳数”+1 --- # # RIPv2报文格式 #
-<div data-align="center">
-<p><img src="mypictures/RIPv2报文格式.png" width=800></p>
-</div>
-<h1 id="rip中的环路及其解决方案一">RIP中的环路及其解决方案（一）</h1>
-<div data-align="center">
-<p><img src="mypictures/RIP中的环路及其解决方案1.png" width=800></p>
-</div>
-<ul>
-<li><h2 id="解决方法一限制有限跳段数为15">解决方法一：限制有限跳段数为15</h2>
-<h1 id="rip中的环路及其解决方案二">RIP中的环路及其解决方案（二）</h1></li>
-<li>解决方法二：水平分割 路由器在向一个接口发送路由更新信息时，剔除掉从该接口收到的路由信息。
-<div data-align="center">
-<p><img src="mypictures/RIP中的环路及其解决方案2.png" width=800></p>
-</div></li>
-</ul>
-<h1 id="bellman-ford算法一">Bellman-Ford算法（一）</h1>
-<ul>
-<li>目的：求出图中所有点到某一目的点的最短距离。</li>
-<li>思想：所有节点每隔一定周期向相邻节点发送自己到目的节点的可达性，每个节点都查看是否可以通过相邻节点到达目的节点</li>
-<li>几个参数定义：
-<ul>
-<li><span class="math inline">\(D_j\)</span>：节点到目的地的最小费用的当前预测值</li>
-<li><span class="math inline">\(C_{ij}\)</span>：节点i到节点j的直连链路费用</li>
-<li><span class="math inline">\(n_i\)</span>：节点i到目的地取最小费用路径时的下一跳</li>
-</ul></li>
-</ul>
-<h1 id="bellman-ford算法举例一">Bellman-Ford算法举例（一）</h1>
-计算图中各节点到目的节点6的最小费用。
-<div data-align="center">
-<p><img src="mypictures/BellmanFord算法举例1.png" width=800></p>
-</div>
-<h1 id="bellman-ford算法举例三">Bellman-Ford算法举例（三）</h1>
-计算图中各节点到目的节点6的最小费用。
-<div data-align="center">
-<p><img src="mypictures/BellmanFord算法举例3.png" width=400></p>
-</div>
-<ol start="2" type="1">
-<li>对每个非d节点，更新<span class="math inline">\(D_i\)</span> <span class="math inline">\(D_i=\min\limits_j(C_{ij}+D_j),\forall j\ne i\)</span>
-<div data-align="center">
-<p><img src="mypictures/BellmanFord算法举例表格2.png" width=600></p>
-</div></li>
-</ol>
-<h1 id="bellman-ford算法举例五">Bellman-Ford算法举例（五）</h1>
-计算图中各节点到目的节点6的最小费用。
-<div data-align="center">
-<p><img src="mypictures/BellmanFord算法举例5.png" width=400></p>
-</div>
-<ol start="3" type="1">
-<li>对每个非d节点，更新<span class="math inline">\(D_i\)</span> <span class="math inline">\(D_i=\min\limits_j(C_{ij}+D_j),\forall j\ne i\)</span>
-<div data-align="center">
-<p><img src="mypictures/BellmanFord算法举例表格4.png" width=600></p>
-</div></li>
-</ol>
-<h1 id="练习">练习</h1>
-计算图中各节点到目的节点5的最小费用。
-<div data-align="center">
-<p><img src="mypictures/BellmanFord算法练习.png" width=800></p>
-</div>
-<h1 id="ospf开放式最短路径优先">OSPF：开放式最短路径优先</h1>
-<ul>
-<li>OSPF：Open Shortest Path First，开放最短路径优先</li>
-<li>是一种链路状态路由协议
-<ul>
-<li>“开放”意味着公有</li>
-<li>管理距离：110</li>
-</ul></li>
-<li>OSPF采用SPF算法计算达到目的地的最短路径：
-<ul>
-<li>什么叫链路(LINK)=路由器接口</li>
-<li><h2 id="什么叫状态state描述接口以及其与邻居路由器之间的关系">什么叫状态(State)=描述接口以及其与邻居路由器之间的关系</h2>
-<h1 id="链路状态选路">链路状态选路</h1>
-<div data-align="center">
-<p><img src="mypictures/链路状态选路.png" width=800></p>
-</div></li>
-</ul></li>
-</ul>
-<h1 id="ospf中的几个参数二">OSPF中的几个参数（二）</h1>
-<ul>
-<li>Router-id
-<ul>
-<li>用于在一个OSPF域中唯一地标识一台路由器</li>
-<li>可以通过手工配置的方式，或者通过自动选取的方式。</li>
-<li><h2 id="自动选取的机制是若有loopback口地址则选最大的loopback口ip地址若无则选活跃的物理接口中ip地址最大的作为routerid">自动选取的机制是：若有loopback口地址，则选最大的loopback口IP地址，若无则选活跃的物理接口中IP地址最大的作为RouterID</h2>
-<h1 id="几种ospf报文">几种OSPF报文</h1></li>
-</ul></li>
-<li>Hello报文：建立和维护OSPF邻居关系</li>
-<li>DD报文：链路状态数据库描述信息（描述LSDB中LSA头部信息）</li>
-<li>LSR报文：链路状态请求,向OSPF邻居请求链路状态信息</li>
-<li>LSU报文：链路状态更新（包含一条或多条LSA）</li>
-<li>LSAck：对LSU中的LSA进行确认</li>
-</ul>
-<h1 id="两台路由器之间建立邻接关系的过程">两台路由器之间建立邻接关系的过程</h1>
-<div data-align="center">
-<p><img src="mypictures/OSPF邻接关系建立过程.png" width=800></p>
-</div>
-<h1 id="dijkstra算法二">Dijkstra算法（二）</h1>
-<ul>
-<li>几个参数
-<ul>
-<li>集合N：已算出最短路径的网络节点的集合</li>
-<li>D(u)：源节点到任一节点u的当前距离</li>
-<li><h2 id="lij节点i到到节点j的直连距离">L(i，j)：节点i到到节点j的直连距离</h2>
-<h1 id="dijkstra算法三">Dijkstra算法（三）</h1>
-算法过程：</li>
-</ul></li>
-</ul>
-<ol type="1">
-<li>初始化 - 令集合N={s}，s是源节点，对所有不在集合N中的节点u，写出D(u) <span class="math inline">\(D(u)=\begin{cases}L(s,u),节点u与节点s直接相连\\\infty,节点u与节点s不直接相连\end{cases}\)</span></li>
-<li>寻找一个不在N中的D(w)值最小的节点w 把节点w加入到N中，对所有不在N中的节点u，更新D(u) D(u)=min[D'(u),D(w)+L(w,u)] D'(u)：上一轮更新中节点u的距离值</li>
-<li><h2 id="重复第2步直至集合n包含所有节点">重复第2步，直至集合N包含所有节点</h2>
-<h1 id="dijkstra算法范例一">Dijkstra算法范例（一）</h1>
-计算出由源节点1到网络中其它所有节点的最短路径，画出最短路径树，给出节点1的路由表。
-<div data-align="center">
-<p><img src="mypictures/D算法范例图1.png" width=800></p>
-</div></li>
-</ol>
-<h1 id="dijkstra算法范例三">Dijkstra算法范例（三）</h1>
-</div>
-<div data-align="center">
-<p><img src="mypictures/D算法过程1.png" width=800></p>
-</div>
-<h1 id="dijkstra算法范例五">Dijkstra算法范例（五）</h1>
-</div>
-<div data-align="center">
-<p><img src="mypictures/D算法过程3.png" width=800></p>
-</div>
-<h1 id="dijkstra算法范例七">Dijkstra算法范例（七）</h1>
-</div>
-<div data-align="center">
-<p><img src="mypictures/D算法过程5.png" width=800></p>
-</div>
-<h1 id="dijkstra算法范例九">Dijkstra算法范例（九）</h1>
-</div>
-<div data-align="center">
-<p><img src="mypictures/D算法过程8.png" width=800></p>
-</div>
-<h1 id="dijkstra算法范例十一">Dijkstra算法范例（十一）</h1>
-</div>
-<div data-align="center">
-<p><img src="mypictures/D算法过程9.png" width=800></p>
-</div>
-<h1 id="dijkstra算法范例十三">Dijkstra算法范例（十三）</h1>
-</div>
-<div data-align="center">
-<p><img src="mypictures/D算法过程11.png" width=800></p>
-</div>
-<h1 id="链路状态选路的特点">链路状态选路的特点</h1>
-<ul>
-<li>链路状态协议能够快速汇聚，因为LSP能够迅速传遍全网，快速地建立起网络拓扑的准确视图；</li>
-<li>由于LSP传送的是网络拓扑的变化，而不是整个路由数据库，因此网络开销更小。</li>
-<li>链路状态选路的LSP能够支持多种网络参数或信息的传送，因此具有较好的可扩展性。</li>
-<li><h2 id="ospf报文直接封装在ip中不依靠udp或tcp">OSPF报文直接封装在IP中，不依靠UDP或TCP</h2>
-<h1 id="rip和ospf比较">RIP和OSPF比较</h1>
-和RIP相比，OSPF有以下3个不同点。</li>
-<li>向本自治系统中所有路由器发送信息，这里使用的方法是洪泛法。</li>
-<li>发送的信息就是与本路由器相邻的所有路由器的链路状态，但这只是路由器所知道的部分信息。</li>
-<li><h2 id="只有当链路状态发生变化时路由器才用洪泛法向所有路由器发送此信息">只有当链路状态发生变化时，路由器才用洪泛法向所有路由器发送此信息。</h2>
-<h1 id="ospf分层路由的思想">OSPF分层路由的思想</h1></li>
-<li>为了能够用于规模很大的网络，OSPF把一个大型网络分割成多个小型网络的能力被称为分层路由，这些被分割出来的小型网络就称为“区域”（Area）。</li>
-<li>一个区域实际上是自治系统被划分后形成的一组路由器和网络的集合。</li>
-<li>每个区域定义一个独立的区域号（32bit），并将此信息配置给网络中的每个路由器。</li>
-<li><h2 id="在ospf网络中必须存在一个骨干区域区域0所有的其他区域非0区域都必须通过一个区域边界路由器连接到骨干区域上">在OSPF网络中必须存在一个骨干区域（区域0）。所有的其他区域（非0区域）都必须通过一个区域边界路由器连接到骨干区域上</h2>
-<h1 id="ospf网络">OSPF网络</h1>
-</div>
-<div data-align="center">
-<p><img src="mypictures/OSPF网络.png" width=800></p>
-</div></li>
-</ul>
-<h1 id="ospf网络中的分层路由">OSPF网络中的分层路由</h1>
-<ul>
-<li>在一个区域中，路由器之间相互发布和交换链路状态通告（LSA），并为该区域建立一个统一的拓扑映射图（即链路状态数据库）。</li>
-<li><h2 id="而不同的区域之间通过abr相互传递有关特定网络拓扑结构的概括性信息因此每个路由器都将保存其所在区域内的完整的网络路由信息对区域外的网络只保存了某些特殊的概括性信息而这些信息又足够保证本区域内的分组能通过abr被转发到另一个区域中的网络">而不同的区域之间通过ABR相互传递有关特定网络拓扑结构的概括性信息。因此，每个路由器都将保存其所在区域内的完整的网络路由信息；对区域外的网络只保存了某些特殊的概括性信息，而这些信息又足够保证本区域内的分组能通过ABR被转发到另一个区域中的网络。</h2>
-<h1 id="提纲-2">提纲</h1></li>
-<li>网际互联协议IP</li>
-<li>IP路由协议</li>
-<li><font color=[0,104,139]><em>多协议标签交换MPLS</em></font>
-<ul>
-<li><font color=[0,104,139]><em>技术背景</em></font></li>
-<li>工作原理</li>
-<li>标签分发协议</li>
-<li><h2 id="mpls-vpn">MPLS VPN</h2>
-<h1 id="技术背景一">技术背景（一）</h1></li>
-</ul></li>
-<li>ATM代表了电信技术的优势
-<ul>
-<li>面向连接，中间节点不需寻路，信元标识符长度固定，硬件实现转发</li>
-<li>有QoS保证</li>
-<li>支持任何业务（不同速率，不同突发性，不同实时性）</li>
-<li>缺点：技术复杂</li>
-<li><h2 id="发展方向提高其灵活性简化设备">发展方向：提高其灵活性，简化设备</h2>
-<h1 id="技术背景二">技术背景（二）</h1></li>
-</ul></li>
-<li>IP代表了计算机网络技术的优势
-<ul>
-<li>无连接，动态、分布式的路由，网络地址长度可变，软件实现</li>
-<li>灵活性、可扩展性强</li>
-<li>缺点：传输效率低，无QoS保证</li>
-<li><h2 id="发展方向使用硬件交换来提高服务质量">发展方向：使用硬件交换来提高服务质量</h2>
-<h1 id="技术背景三">技术背景（三）</h1></li>
-</ul></li>
-<li>IP与ATM技术相结合
-<ul>
-<li>叠加模型：包括运行在一个独立的ATM层之上的一个IP层，由运行IP路由协议、具有IP地址的IP设备和运行ATM信令及路由协议、具有ATM地址的ATM设备组成</li>
-<li><h2 id="集成模型将atm层看成ip层的对等层将ip层的路由功能与第2层交换功能结合起来使用一套专有的控制信令其目的在于提高ip包的传送速度简化网络集成模型的实现方式主要有aris集成ip交换技术tapswitching标签交换技术mpls等技术">集成模型：将ATM层看成IP层的对等层，将IP层的路由功能与第2层交换功能结合起来。使用一套专有的控制信令，其目的在于提高IP包的传送速度，简化网络。集成模型的实现方式主要有ARIS（集成IP交换技术）、TapSwitching（标签交换技术）、MPLS等技术。</h2>
-<h1 id="重叠模型例cipoa技术">重叠模型例：CIPOA技术</h1></li>
-</ul></li>
-<li>ATM网络被分成多个逻辑IP子网（LIS），ATM通信连接限制在同一个LIS内，LIS之间仍然通过路由器互相通信
-</div>
-<div data-align="center">
-<p><img src="mypictures/CIPOA.png" width=700></p>
-</div></li>
-</ul>
-<h1 id="ipsilon的ip交换">Ipsilon的IP交换</h1>
-</div>
-<div data-align="center">
-<p><img src="mypictures/Ipsilon的IP交换.png" width=800></p>
-</div>
-<h1 id="提纲-3">提纲</h1>
-<ul>
-<li>网际互联协议IP</li>
-<li>IP路由协议</li>
-<li><font color=[0,104,139]><em>多协议标签交换MPLS</em></font>
-<ul>
-<li>技术背景</li>
-<li><font color=[0,104,139]><em>工作原理</em></font></li>
-<li>标签分发协议</li>
-<li><h2 id="mpls-vpn-1">MPLS VPN</h2>
-<h1 id="mpls工作原理">MPLS工作原理</h1></li>
-</ul></li>
-<li>标签交换路由器的功能包含两个层面，即控制层面和数据层面。
-<ul>
-<li>控制层面包括MPLS的信令和路由。控制层面负责标记交换路径的建立、拆除、保护、重建立、重路由等，是整个MPLS理论的核心。</li>
-<li><h2 id="数据层面的主要功能是对ip包进行标签封装和去封装同时根据控制层面建立的路由转发标记包数据层面与链路层有着紧密的联系标签的内容以及如何利用链路层电路的标识构成标签的封装等就是数层平面的主要内容">数据层面的主要功能是对IP包进行标签封装和去封装，同时根据控制层面建立的路由转发标记包。数据层面与链路层有着紧密的联系。标签的内容以及如何利用链路层电路的标识构成标签的封装等就是数层平面的主要内容。</h2>
-<h1 id="核心lsr体系结构">核心LSR体系结构</h1>
-<div data-align="center">
-<p><img src="mypictures/LSR结构1.png" width=800></p>
-</div></li>
-</ul></li>
-</ul>
-<h1 id="数据平面">数据平面</h1>
-<ul>
-<li>在边缘路由器接收IP包，判断IP包所属的FEC，进行路由选择并给IP包打上FEC的相应标签，形成MPLS标签包，并将其发往其他LSR。</li>
-<li>在LSR构成的网络中，LSR对标签分组不再进行任何第三层处理，只是根据分组上的标签以及标签转发表通过交换单元对其进行转发，同时完成相应的标签转换。</li>
-<li><h2 id="在mpls出口的路由器上将分组中的标签去掉后继续进行转发">在MPLS出口的路由器上，将分组中的标签去掉后继续进行转发。</h2>
-<h1 id="转发等价类fec">转发等价类（FEC）</h1></li>
-<li>MPLS将具有相同转发处理方式的分组归为一类。</li>
-<li>在标签绑定过程中，各种FEC对应于不同的标签。</li>
-<li>分类可以基于：
-<ul>
-<li>目的单播地址</li>
-<li>流量工程</li>
-<li>VPN</li>
-<li>QoS</li>
-</ul></li>
-<li><h2 id="因此fec标识符可以是目的地址前缀vpn流量工程隧道服务等级">因此，FEC标识符可以是：目的地址前缀,VPN,流量工程隧道,服务等级。</h2>
-<h1 id="标签一">标签（一）</h1></li>
-<li>标签是一个固定长度、具有本地意义的短标识符，它包含在每个分组中，用于标识一个转发等价类（FEC）。
-<div data-align="center">
-<p><img src="mypictures/标签结构.png" width=800></p>
-</div></li>
-</ul>
-<h1 id="标签操作---switch">标签操作---switch</h1>
-<div data-align="center">
-<p><img src="mypictures/标签switch.png" width=800></p>
-</div>
-<h1 id="标签操作---pop">标签操作---pop</h1>
-<div data-align="center">
-<p><img src="mypictures/标签pop.png" width=700></p>
-</div>
-<h1 id="控制平面">控制平面</h1>
-<ul>
-<li>在传统路由协议（如OSPF等）形成的路由表的基础上，LSR进行转发等价类（FEC）的划分。</li>
-<li>LSR将标签绑定到FEC上。</li>
-<li><h2 id="lsr通过标签分发协议ldp将标签与fec的绑定关系分发到其他lsr在lsr上形成标签转发路由表同时形成标签交换路径lsp">LSR通过标签分发协议LDP将标签与FEC的绑定关系分发到其他LSR，在LSR上形成标签转发路由表，同时形成标签交换路径LSP。</h2>
-<h1 id="提纲-4">提纲</h1></li>
-<li>网际互联协议IP</li>
-<li>IP路由协议</li>
-<li><font color=[0,104,139]><em>多协议标签交换MPLS</em></font>
-<ul>
-<li>技术背景</li>
-<li>工作原理</li>
-<li><font color=[0,104,139]><em>标签分发协议</em></font></li>
-<li><h2 id="mpls-vpn-2">MPLS VPN</h2>
-<h1 id="标签分发协议">标签分发协议</h1></li>
-</ul></li>
-<li>标签分发协议用于：
-<ul>
-<li>产生label和FEC的绑定关系</li>
-<li>向邻居分发绑定关系</li>
-<li>维护标签交换表</li>
-</ul></li>
-<li><h2 id="目前ietf中支持3种标签分发协议ldp基本标签分发协议cr-ldp限制路由的标签分发协议以及rsvpextension扩展的资源预留协议而itu-t仅支持ldp和cr-ldp">目前，IETF中支持3种标签分发协议：LDP（基本标签分发协议）、CR-LDP（限制路由的标签分发协议）以及RSVPExtension（扩展的资源预留协议），而ITU-T仅支持LDP和CR-LDP。</h2>
-<h1 id="标签分发的过程">标签分发的过程</h1></li>
-<li>IP路由协议创建/更新IP路由表</li>
-<li>每个LSR为路由表中的每条路由前缀分配一个标签</li>
-<li>LSR向所有其他LSRs宣告已分配的标签</li>
-<li>每个LSR根据收到的标签和本地路由表创建其LIB，LFIB和FIB：
-<ul>
-<li>LSR将自己针对前缀分配的标签以及邻居发来的标签存储在LIB中；</li>
-<li>LSR将下一跳LSR发送过来的标签，用来填充FIB表中的标签信息以及LFIB表中的OutgoingLabel</li>
-</ul></li>
-</ul>
-<h1 id="控制平面过程二">控制平面过程（二）</h1>
-<ol start="2" type="1">
-<li>分配并分发标签
-<div data-align="center">
-<p><img src="mypictures/MPLS控制平面过程2.png" width=700></p>
-</div></li>
-</ol>
-<ul>
-<li>所有LSR会为自己本地路由表中的路由前缀分配标签</li>
-<li><h2 id="这些关于路由前缀的标签会被分发给其他ldp邻居">这些关于路由前缀的标签会被分发给其他LDP邻居</h2>
-<h1 id="控制平面过程三">控制平面过程（三）</h1></li>
-</ul>
-<ol start="3" type="1">
-<li>收到标签后，维护LIB
-<div data-align="center">
-<p><img src="mypictures/MPLS控制平面过程3.png" width=700></p>
-</div></li>
-</ol>
-<ul>
-<li><h2 id="lsr收到标签绑定消息后更新lib">LSR收到标签绑定消息后更新LIB</h2>
-<h1 id="控制平面过程四">控制平面过程（四）</h1></li>
-</ul>
-<ol start="4" type="1">
-<li>维护LFIB
-<div data-align="center">
-<p><img src="mypictures/MPLS控制平面过程4.png" width=700></p>
-</div></li>
-</ol>
-<ul>
-<li><h2 id="lsr根据lib和rib形成fib和lfib">LSR根据LIB和RIB形成FIB和LFIB</h2>
-<h1 id="控制平面过程五">控制平面过程（五）</h1></li>
-</ul>
-<ol start="5" type="1">
-<li>所有设备的LFIB
-<div data-align="center">
-<p><img src="mypictures/MPLS控制平面过程5.png" width=700></p>
-</div></li>
-</ol>
-<ul>
-<li><h2 id="lsr根据lib和rib形成fib和lfib-1">LSR根据LIB和RIB形成FIB和LFIB</h2>
-<h1 id="数据传递过程">数据传递过程</h1>
-<div data-align="center">
-<p><img src="mypictures/MPLS数据传递过程.png" width=700></p>
-</div></li>
-</ul>
-<h1 id="提纲-5">提纲</h1>
-<ul>
-<li>网际互联协议IP</li>
-<li>IP路由协议</li>
-<li><font color=[0,104,139]><em>多协议标签交换MPLS</em></font>
-<ul>
-<li>技术背景</li>
-<li>工作原理</li>
-<li>标签分发协议</li>
-<li><h2 id="mpls-vpn-3"><font color=[0,104,139]><em>MPLS VPN</em></font></h2>
-<h1 id="mpls的应用">MPLS的应用</h1>
-MPLS从应用上目前主要有两大类：</li>
-</ul></li>
-<li>MPLS TE（TrafficEngineering）流量工程
-<ul>
-<li>为了平衡网络设备的流量，根据数据流量进行显式路径选择的过程，主要用于提高网络运作效率与可靠性，并优化网络资源利用和流量性能。 具体：流量统计、流量优化、网络保护</li>
-</ul></li>
-<li>MPLS VPN
-<ul>
-<li>VPN是在公共网络上叠加的一个逻辑网络</li>
-<li>通过为每个VPN分配一个标识符，将VPN的成员（及各自的网络地址前缀）和一组标记相关联</li>
-<li><h2 id="建立vpn的内部lsp提供一个安全和可预测的方式交换业务量">建立VPN的内部LSP，提供一个安全和可预测的方式交换业务量</h2>
-<h1 id="mpls虚拟专用网vpn">MPLS虚拟专用网（VPN）</h1>
-<div data-align="center">
-<p><img src="mypictures/MPLS VPN网络结构.png" width=800></p>
-</div></li>
-</ul></li>
-</ul>
-<h1 id="mpls-vpn网络中的地址重叠一">MPLS VPN网络中的地址重叠（一）</h1>
-<div data-align="center">
-<p><img src="mypictures/MPLS VPN地址重叠1.png" width=800></p>
-</div>
-<h1 id="mpls-vpn网络中的地址重叠三">MPLS VPN网络中的地址重叠（三）</h1>
-<div data-align="center">
-<p><img src="mypictures/MPLS VPN地址重叠3.png" width=800></p>
-</div>
-<h1 id="关键技术一">关键技术一</h1>
-<ul>
-<li>PE路由器的改造和VRF的导入
-<ul>
-<li>为了让PE路由器上能区分是哪个本地接口上送来的VPN用户路由，在PE路由器上创建了大量的虚拟路由器，每个虚拟路由器都有各自的路由表和转发表，这些路由表和转发表统称为VRF(VPNRoutingandForwardinginstances)。</li>
-<li>一个VRF定义了连到PE路由器上的VPN成员。</li>
-<li><h2 id="有了虚拟路由器就能隔离不同vpn用户之间的路由也能解决不同vpn之间ip地址空间重叠的问题">有了虚拟路由器就能隔离不同VPN用户之间的路由，也能解决不同VPN之间IP地址空间重叠的问题。</h2>
-<h1 id="虚拟路由器">虚拟路由器</h1>
-<div data-align="center">
-<p><img src="mypictures/虚拟路由器.png" width=800></p>
-</div></li>
-</ul></li>
-</ul>
-<h1 id="关键技术二二">关键技术二（二）</h1>
-<ul>
-<li>IP地址和VPN-IP地址之间的转换在PE完成
-<ul>
-<li>入口PE–将路径信息输出到供应商的BGP中:
-<ul>
-<li>PE对每个直连的VPN（站点）配置一个RD</li>
-<li>在输出到BGP之前，将IP转换为VPN-IP(加上RD)</li>
-</ul></li>
-<li>出口PE–将路径信息从BGP输出:
-<ul>
-<li><h2 id="在插入相应站点的转发表之前将vpn-ip转换为ip去掉rd">在插入相应站点的转发表之前，将VPN-IP转换为IP(去掉RD)</h2>
-<h1 id="路由标识符rd">路由标识符RD</h1>
-<div data-align="center">
-<p><img src="mypictures/路由标识符RD.png" width=800></p>
-</div></li>
-</ul></li>
-</ul></li>
-</ul>
-<h1 id="vrf路由信息分发过程">VRF路由信息分发过程</h1>
-<div data-align="center">
-<p><img src="mypictures/VRF路由信息分发过程.png" width=800></p>
-</div>
-<h1 id="关键技术四">关键技术四</h1>
-<ul>
-<li>MPLS/VPN中标签分组的转发:两级标记栈
-<ul>
-<li>栈顶标签用于入口PE到出口PE的转发
-<ul>
-<li>通过LDP协议分发</li>
-</ul></li>
-<li>栈底标签用于出口PE处的转发
-<ul>
-<li>通过MP-BGP分发(同时分发VPN路径信息)</li>
-</ul></li>
-</ul>
-<h2 id="p路由器仅仅维护内部路径不需要知道vpn路径">==&gt;P路由器仅仅维护内部路径，不需要知道VPN路径</h2>
-<h1 id="数据包在mpls-vpn中的传递">数据包在MPLS VPN中的传递</h1>
-<div data-align="center">
-<p><img src="mypictures/数据包在MPLS VPN中的传递过程.png" width=800></p>
-</div></li>
-</ul>
-<h1 id="本章小结">本章小结</h1>
-<ul>
-<li>IP地址与物理地址</li>
-<li>IP地址的三种编址方式</li>
-<li>IP数据报格式</li>
-<li>路由器的结构</li>
-<li>IP分组转发的过程</li>
-<li>RIP/OSPF协议的特点、工作过程、路由更新算法、缺点</li>
-<li>MPLS网络中的基本概念、设备及其基本工作过程</li>
-<li>MPLS VPN网络的控制平面、数据平面工作过程</li>
-</ul>
-]]></content>
   </entry>
   <entry>
     <title>test1</title>
