@@ -176,24 +176,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>MPLS VPN实验</title>
-    <url>/VS80WG/</url>
-    <content><![CDATA[<p>写在正文之前：</p>
-<p>曾经很是花了一段时间折腾思科模拟器，用起来感觉比华为模拟器顺畅， 可玩性较好。</p>
-<p>也是从那时起开始学习使用微软的OneNote来记录实验过程，很好用的笔记软件，除了同步差点，其它没毛病。</p>
-<p>以此纪念曾经的岁月。</p>
-<h1 id="mpls-vpn实验">MPLS VPN实验</h1>
-<h2 id="实验目的">实验目的</h2>
-<h2 id="实验环境">实验环境</h2>
-<h2 id="实验网络拓扑">实验网络拓扑</h2>
-<h2 id="实验步骤">实验步骤</h2>
-<h2 id="实验结论">实验结论</h2>
-]]></content>
-      <tags>
-        <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>test1</title>
     <url>/25B5Q72/</url>
     <content><![CDATA[
