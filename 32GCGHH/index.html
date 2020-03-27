@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="renderer" content="webkit">
+
+  
+  <title>捣鼓新的博客 | xling的博客</title>
+
+  <link rel="shortcut icon" href="/images/favicon.png">
+  <link rel="alternate" href="/atom.xml" title="xling的博客">
+  <meta name="description" content="基础配置 初始化Hexo 123hexo init jerrywcy.gitlab.iocd jerrywcy.gitlab.ionpm install 出现报错 12npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@~2.1.2 (node_modules\chokidar\node_modules\fsevents):npm WA">
+<meta property="og:type" content="article">
+<meta property="og:title" content="捣鼓新的博客">
+<meta property="og:url" content="http://sunxling.gitee.io/32GCGHH/">
+<meta property="og:site_name" content="xling的博客">
+<meta property="og:description" content="基础配置 初始化Hexo 123hexo init jerrywcy.gitlab.iocd jerrywcy.gitlab.ionpm install 出现报错 12npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@~2.1.2 (node_modules\chokidar\node_modules\fsevents):npm WA">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="d:/%E7%8E%8B%E6%A5%9A%E5%B1%B9/Hexo/sunxling.gitlab.io/source/images/hexo-tag-wikipedia-ss1.png">
+<meta property="og:image" content="d:/%E7%8E%8B%E6%A5%9A%E5%B1%B9/Hexo/sunxling.gitlab.io/source/images/1584962683058.png">
+<meta property="article:published_time" content="2020-03-27T11:34:18.992Z">
+<meta property="article:modified_time" content="2020-03-27T11:47:31.757Z">
+<meta property="article:author" content="sunxl">
+<meta property="article:tag" content="hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="d:/%E7%8E%8B%E6%A5%9A%E5%B1%B9/Hexo/sunxling.gitlab.io/source/images/hexo-tag-wikipedia-ss1.png">
+
+  <meta name="format-detection" content="telephone=no,email=no">
+  <meta name="theme-color" content="#9C27B0">
+  <meta name="description" content="Communication Network notes">
+  <meta name="keywords" content=",hexo">
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="xling的博客">
+  <meta name="msapplication-starturl" content="http://sunxling.gitee.io/32GCGHH/">
+  <meta name="msapplication-navbutton-color" content="#9C27B0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="xling的博客">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
+
+  
+    <meta property="article:published_time" content="Fri Mar 27 2020 19:34:18 GMT+0800">
+    <meta property="article:modified_time" content="Fri Mar 27 2020 19:47:31 GMT+0800">
+  
+
+  
+    <link rel="canonical" href="http://sunxling.gitee.io/32GCGHH/">
+  
+
+  
+  
+
+  
+  
+  
+
+  
+<link rel="stylesheet" href="/css/mdui.css">
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+    <!-- live2d -->
+    <script src="https://cdn.jsdelivr.net/gh/sunxling/live2d-widget@latest/autoload.js"></script>
+
+<meta name="generator" content="Hexo 4.2.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container {
+  overflow: auto hidden;
+}
+
+mjx-container + br {
+  display: none;
+}
+</style><link rel="alternate" href="/atom.xml" title="xling的博客" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="xling的博客" type="application/rss+xml">
+<style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container {
+  overflow: auto hidden;
+}
+
+mjx-container + br {
+  display: none;
+}
+</style></head>
+
+<body class="mdui-appbar-with-toolbar mdui-drawer-body-left mdui-theme-primary-indigo mdui-theme-accent-pink">
+  <script>var a=localStorage.getItem("mdui-theme-layout-dark");if(a){document.getElementsByTagName("body")[0].className+=" mdui-theme-layout-dark"};</script>
+  <header id="header" class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide mdui-appbar-inset">
+  <div class="mdui-toolbar mdui-color-theme">
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="mdui-icon material-icons">menu</i></a>
+    <a href="/" class="mdui-typo-headline">xling的博客</a>
+    <div class="mdui-toolbar-spacer"></div>
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: '搜索'}"><i class="mdui-icon material-icons">search</i></a>
+    <a href="/atom.xml" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: 'RSS'}"><i class="mdui-icon material-icons">rss_feed</i></a>
+  </div>
+</header>
+<div class="mdui-dialog" id="search">
+  
+    <div class="search-form">
+      <input type="search" class="search-form-input" placeholder="Enter the key words">
+    </div>
+    <div class="search-result" data-resource="/search.xml"></div>
+  
+</div>
+  <aside id="sidebar" class="mdui-drawer mdui-drawer-full-height">
+  <div class="mdui-grid-tile">
+    <img src="/images/banner.png" style="height: 160px;">
+    <img src="/images/avatar.png" class="avatar-animation" style="position: absolute; top: 10%; left: 24px; width: 64px; height: 64px; border: 2px solid #fff; border-radius: 50%;">
+    <div class="mdui-grid-tile-actions">
+      <div class="mdui-grid-tile-text">
+        <div class="mdui-grid-tile-title">sunxl</div>
+        <div class="mdui-grid-tile-subtitle"><i class="mdui-icon material-icons">art_track</i></div>
+      </div>
+      
+        <div class="mdui-grid-tile-buttons">
+          <a href="mailto:xling_x@126.com" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: 'xling_x@126.com'}"><i class="mdui-icon material-icons">email</i></a>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="mdui-list" mdui-collapse="{accordion: true}">
+    <a href="/" class="mdui-list-item mdui-ripple">
+      <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-blue">home</i>
+      <div class="mdui-list-item-content">主页</div>
+    </a>
+    <div class="mdui-collapse-item">
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-deep-orange">inbox</i>
+        <div class="mdui-list-item-content">归档</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        <a class="mdui-ripple sidebar_archives-link" href="/archives/2020/03/">三月 2020<span class="mdui-ripple sidebar_archives-count">3</span></a>
+        
+      </div>
+    </div>
+    <div class="mdui-collapse-item">
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-green">chrome_reader_mode</i>
+        <div class="mdui-list-item-content">分类</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        <a class="mdui-ripple sidebar_archives-link" href="/categories/SDN%E5%AE%9E%E9%AA%8C/">SDN实验<span class="mdui-ripple sidebar_archives-count">1</span></a>
+        
+      </div>
+    </div>
+    <div class="mdui-collapse-item">
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-brown">bookmark</i>
+        <div class="mdui-list-item-content">标签</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+        <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+        <div class="widget-wrap">
+            <div id="myCanvasContainer" class="widget tagcloud">
+                <canvas width="250" height="250" id="resCanvas" style="width:100%">
+                    <a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
+                </canvas>
+            </div>
+        </div>
+        
+        
+        <a class="mdui-ripple sidebar_archives-link" href="/tags/hexo/" rel="tag">hexo<span class="mdui-ripple sidebar_archives-count">2</span></a>
+        
+      </div>
+    </div>
+    <a href="/about" class="mdui-list-item mdui-ripple">
+      <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-purple">person</i>
+      <div class="mdui-list-item-content">关于</div>
+    </a>
+  </div>
+
+  <div class="mdui-divider"></div>
+
+  <div class="mdui-list" mdui-collapse="{accordion: true}">
+    
+      <a href="/%E6%A0%87%E7%AD%BE%E4%BA%91" class="mdui-list-item mdui-ripple">标签云</a>
+    
+      <a href="/gallery" class="mdui-list-item mdui-ripple">Gallery</a>
+    
+    <div class="mdui-collapse-item">
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <div class="mdui-list-item-content">友情链接</div>
+        <i class="mdui-list-item-icon mdui-icon material-icons">link</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+          <a href="https://github.com" target="_blank" class="mdui-list-item mdui-ripple mdui-p-l-2 mdui-text-color-theme-accent" style="justify-content: center;">Github</a>
+        
+        
+      </div>
+    </div>
+  </div>
+</aside>
+
+  <main id="main" class="mdui-m-t-5 fadeIn animated">
+  
+<link rel="stylesheet" href="https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  <style>#main article .mdui-card-content .center-block{display:block!important;margin-right:auto!important;margin-left:auto!important}</style>
+  <article class="mdui-card mdui-m-b-5">
+    <header class="mdui-card-media">
+      <img src="/images/random/material-16.png" style="max-height: 240px;">
+      <div class="mdui-card-media-covered">
+        <div class="mdui-card-primary">
+          <div class="mdui-card-primary-title">捣鼓新的博客</div>
+          <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2020-03-27 / <i class="iconfont">&#xe601;</i> sunxling</div>
+        </div>
+      </div>
+      <div class="mdui-card-menu">
+        
+          <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-menu="{target: '#qrcode', align: 'right'}"><i class="mdui-icon material-icons">devices</i></button>
+          <ul class="mdui-menu" id="qrcode">
+            
+              <li class="mdui-menu-item"><a class="mdui-text-center mdui-ripple">Send to mobile phone</a></li>
+            
+            <li class="mdui-menu-item" disabled>
+              
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAAB5UlEQVR42u3aS27DMAwFwNz/0u22QFv1kbKTKhyvgsCWNV4Q4ufx8RbXAwMDAwMDAwPj3zAe8fXDQl/+/35PvmZvDxgYGNMYf4S2JSNZIVmn+iwGBsZMxjogJsGxGoh7e8DAwMDovWYdKBMYBgYGxh2MJGVN8BgYGBjXJrG9Mlmy9afm4hgYGAcyqkX8O34/tb+BgYFxFKM84tCC9ZoBN86MYGBgHMWoFv2jQ9syiV1/msJ7MTAwxjOqL+uNhfVG0DAwMKYxknJ8EkB3gnK19IaBgTGNkZfse3cWAmh8JwYGxjRGvsU8aCZFumpRDwMDYzIjKZblx7s8Hd1pl2JgYExj5AX9nYGwvJRWSIwxMDAGM3YKZNXUtNcixcDAwKiWzKqHyBx8ccDFwMA4lpE3KfPQnJfSegktBgbGTEb16JaPheUB9+LGAAYGxlsz8gPftSvcMjOCgYHxdoz1794hcr+F+etHwcDAGMOoXtUX75TwMDAwMKrFr52n8oS20NrEwMAYxkiCbLWRsJOyRrvCwMAYyaiGy97g6U4jEwMDA2Ofkf9TCKy9qiEGBgbGemBro/T/goCLgYFxFCNJYnc+Qf5stAIGBsYwRq/EnwyH9QC39zcwMDCOYpx7YWBgYGBgYGC89PoE/vKrOK+Shk8AAAAASUVORK5CYII=">
+              
+            </li>
+          </ul>
+        
+        
+          <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="mdui-icon material-icons">share</i></button>
+          <ul class="mdui-menu" id="share_menu">
+            <li class="mdui-menu-item">
+              <a href="http://service.weibo.com/share/share.php?appkey=&title=捣鼓新的博客&url=http://sunxling.gitee.io/32GCGHH/&pic=http://sunxling.gitee.io/images/favicon.png&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到微博</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://twitter.com/intent/tweet?text=捣鼓新的博客&url=http://sunxling.gitee.io/32GCGHH/&via=sunxl" target="_blank" class="mdui-ripple">分享到Twitter</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=http://sunxling.gitee.io/32GCGHH/" target="_blank" class="mdui-ripple">分享到Facebook</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://plus.google.com/share?url=http://sunxling.gitee.io/32GCGHH/" target="_blank" class="mdui-ripple">分享到Google+</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://sunxling.gitee.io/32GCGHH/&title=捣鼓新的博客" target="_blank" class="mdui-ripple">分享到LinkedIn</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="http://connect.qq.com/widget/shareqq/index.html?site=xling的博客&title=捣鼓新的博客&summary=Communication Network notes&pics=http://sunxling.gitee.io/images/favicon.png&url=http://sunxling.gitee.io/32GCGHH/" target="_blank" class="mdui-ripple">分享到QQ</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://telegram.me/share/url?url=http://sunxling.gitee.io/32GCGHH/&text=捣鼓新的博客" target="_blank" class="mdui-ripple">分享到Telegram</a>
+            </li>
+          </ul>
+        
+      </div>
+    </header>
+    <div class="mdui-card-content mdui-typo">
+        
+            <h1 id="基础配置">基础配置</h1>
+<h2 id="初始化hexo">初始化Hexo</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init jerrywcy.gitlab.io</span><br><span class="line">cd jerrywcy.gitlab.io</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<h3 id="出现报错">出现报错</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@~2.1.2 (node_modules\chokidar\node_modules\fsevents):</span><br><span class="line">npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})</span><br></pre></td></tr></table></figure>
+<p>查询后了解到，fsevent是mac系统的，在win或者Linux下使用会有警告，其实忽略了也没问题的。</p>
+<p><code>fsevent</code>：作用是能够检测文件目录的修改，可以记录恶意软件的非法操作，获取恶意软件的完整路径，删除和修改日期。</p>
+<h2 id="初始化仓库">初始化仓库</h2>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git remote add origin https://gitlab.com/jerrywcy/jerrywcy.gitlab.io.git</span><br><span class="line">git add .</span><br><span class="line">git commit -m "Initial commit"</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure> 关于分支，看<a href="https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%9A%84%E6%96%B0%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6" target="_blank" rel="noopener">这里</a></p>
+<h3 id="如何重新输入账户密码">如何重新输入账户密码</h3>
+<pre><code>     1. 打开控制面板(快捷打开win+R,输入control)
+              2. 点击打开用户账户
+              3. 点击凭据管理器
+                       4. 点击windows凭据删除你的git凭据即可。</code></pre>
+<h2 id="配置gitlab-ci">配置Gitlab CI</h2>
+<p>新建文件<code>.gitlab-ci.yml</code></p>
+<p>文件内容：（配置项说明点<a href="https://gitlab.com/help/ci/yaml/README.md" target="_blank" rel="noopener">这里</a>） <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">image: node:13 # Don't use node:10-alpine like hexo document said!You can't install pandoc using node:10-alpine which is based on Alpine Linux.Use node:13,then you can install normally.</span><br><span class="line">cache:</span><br><span class="line">  paths:</span><br><span class="line">    - node_modules/</span><br><span class="line"></span><br><span class="line">before_script:</span><br><span class="line">  - npm install hexo-cli -g</span><br><span class="line">  - npm install</span><br><span class="line"></span><br><span class="line">pages:</span><br><span class="line">  script:</span><br><span class="line">    - hexo generate</span><br><span class="line">  artifacts:</span><br><span class="line">    paths:</span><br><span class="line">      - public</span><br><span class="line">  only:</span><br><span class="line">    - master</span><br></pre></td></tr></table></figure></p>
+<p>注：Gitlab Pages默认的部署文件夹是指定的分支下的<code>public</code>文件夹（这就和hexo合作得很妙）</p>
+<p>然后上传</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .gitlab-ci.yml</span><br><span class="line">git commit -m "add gitlab-ci.yml"</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+<p>然后就好了</p>
+<h1 id="插件">插件</h1>
+<h2 id="hexagon">hexagon</h2>
+<h3 id="安装">安装</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexagon-cli</span><br></pre></td></tr></table></figure>
+<h3 id="使用方法">使用方法：</h3>
+<h4 id="安装插件">安装插件</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexagon -p &lt;plugin name&gt;</span><br><span class="line">hexagon --plugin &lt;plugin name&gt;</span><br><span class="line">hexagon plugin &lt;plugin name&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="安装主题">安装主题</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexagon -t &lt;plugin name&gt;</span><br><span class="line">hexagon --theme &lt;plugin name&gt;</span><br><span class="line">hexagon theme &lt;plugin name&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="列出目前所有的插件和主题">列出目前所有的插件和主题</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexagon -l</span><br><span class="line">hexagon --list</span><br><span class="line">hexagon list</span><br></pre></td></tr></table></figure>
+<h4 id="帮助">帮助</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexagon --help</span><br></pre></td></tr></table></figure>
+<h3 id="hexo-generator-feed">hexo-generator-feed</h3>
+<h4 id="安装-1">安装</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
+<h4 id="选项">选项</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">feed:</span><br><span class="line">type: atom</span><br><span class="line">path: atom.xml</span><br><span class="line">limit: 20</span><br><span class="line">hub:</span><br><span class="line">content:</span><br><span class="line">content_limit: 140</span><br><span class="line">content_limit_delim: ' '</span><br><span class="line">order_by: -date</span><br><span class="line">icon: icon.png</span><br><span class="line">autodiscovery: true</span><br><span class="line">template:</span><br></pre></td></tr></table></figure>
+<h2 id="hexo-tag-cloud">hexo-tag-cloud</h2>
+<p>注意代码要放在article.ejs里</p>
+<p>把</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- page.content %&gt;</span><br></pre></td></tr></table></figure>
+<p>换成了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if (page.type=='tags' &amp;&amp; site.tags.length) { %&gt;</span><br><span class="line">               &lt;!-- Tag Cloud Code --&gt;</span><br><span class="line">        &lt;% } else {%&gt;</span><br><span class="line">            &lt;%- page.content %&gt;</span><br><span class="line">        &lt;% } %&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="hexo-asset-image-fixed">hexo-asset-image-fixed</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install hexo-asset-image-fixed</span><br></pre></td></tr></table></figure>
+<p>注意不要装原版的<code>hexo-asset-image</code>，因为有<a href="https://github.com/xcodebuild/hexo-asset-image/issues/47" target="_blank" rel="noopener">bug</a></p>
+<h2 id="hexo-pdf">hexo-pdf</h2>
+<h3 id="normal-pdf">Normal PDF</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">{% pdf http://7xov2f.com1.z0.glb.clouddn.com/bash_freshman.pdf %}</span><br></pre></td></tr></table></figure>
+<p>or</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">{% pdf ./bash_freshman.pdf %}</span><br></pre></td></tr></table></figure>
+<h3 id="google-drive">Google drive</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">{% pdf https://drive.google.com/file/d/0B6qSwdwPxPRdTEliX0dhQ2JfUEU/preview %}</span><br></pre></td></tr></table></figure>
+<h3 id="slideshare">Slideshare</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">{% pdf http://www.slideshare.net/slideshow/embed_code/key/8Jl0hUt2OKUOOE %}</span><br></pre></td></tr></table></figure>
+<h2 id="hexo-fun-time">hexo-fun-time</h2>
+<h3 id="simple-usage">simple Usage</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">{% funTime %}</span><br></pre></td></tr></table></figure>
+<h3 id="disable-render">disable render</h3>
+<p>If you want to disable this function, you can setting in <code>_config.yml</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fun_time:</span><br><span class="line">  disable: true</span><br></pre></td></tr></table></figure>
+<h3 id="change-default-style">change default style</h3>
+<p>If you want to change default style, you can setting style in <code>_config.yml</code>, you can set three part: body, title, content</p>
+<p>For example:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">fun_time:</span><br><span class="line">  style: </span><br><span class="line">    body:</span><br><span class="line">      margin: "10px 10px 10px auto" # body align right side</span><br><span class="line">    title:</span><br><span class="line">      font-size: 50px # change font size</span><br><span class="line">    content:</span><br><span class="line">      font-size: 30px # change font size</span><br></pre></td></tr></table></figure>
+<p>The default style is:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">fun_time:</span><br><span class="line">  style: </span><br><span class="line">    body:</span><br><span class="line">      width: "400px",</span><br><span class="line">      padding: "10px",</span><br><span class="line">      margin: "10px auto",</span><br><span class="line">      border: "#000 2px dotted; border-radius: 10px"</span><br><span class="line">    title:</span><br><span class="line">      font-size: "24px",</span><br><span class="line">      font-style: "italic",</span><br><span class="line">      text-shadow: "0 0 0.2em #8F7, 0 0 0.2em #8F7"</span><br><span class="line">    content:</span><br></pre></td></tr></table></figure>
+<h3 id="custom-data-resource">custom data resource</h3>
+<p>You can custom your own data resource by add <code>content_api</code> and <code>content_field</code> in <code>_config.yml</code>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fun_time:</span><br><span class="line">  content_api: "http://api.avatardata.cn/Joke/NewstJoke?key={yourAppKey}&amp;rows=10"</span><br><span class="line">  content_field: "result.[].content"</span><br></pre></td></tr></table></figure>
+<p>The <code>content_api</code> is api where your jokes get from.</p>
+<p>The <code>content_field</code> is the string that define the content location in response of your api. It is few of word join by '.'. If word is not '[]', it represent a property of object, if word is '[]', it represent this property is array.</p>
+<p>For Example, the <code>content_field</code> of follow code is <code>result.[].content</code>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">{ </span><br><span class="line">  result: </span><br><span class="line">   [ { content: '楼主大四女生，这几天和同一宿舍的女生一起去找工作，在火车站，碰到一个大姐，带着一个四五岁的小男孩侯车，小男孩总是粘着我，要坐我腿上，同宿舍的女生很是羡慕我有人缘，我得意的问小男孩：“你为什么老是喜欢坐姐姐腿上？” 小男孩用稚嫩的口气回答：“姐姐腿上肉多，坐着舒服” 我：“尼玛，这是谁家小哔崽子，快点领走！”',</span><br><span class="line">       hashId: '8d914207de87e464bc99055a02160d27',</span><br><span class="line">       unixtime: '1554778627',</span><br><span class="line">       updatetime: '2019-04-09 10:57:07' },</span><br><span class="line">     { content: '女：“我购物车里的那些水果牛奶饮料零食你赶紧给我买！” 男：“着什么急呀？” 女：“天越来越热了，会放坏的。”',</span><br><span class="line">       hashId: '7236a1fe92605a8b5540c4279bd8f973',</span><br><span class="line">       unixtime: '1554778627',</span><br><span class="line">       updatetime: '2019-04-09 10:57:07' }],</span><br><span class="line">  error_code: 0,</span><br><span class="line">  reason: 'Succes',</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<p>More example show in <a href="https://github.com/Drunkman/hexo-fun-time/blob/master/test/objectUtilsTest.js" target="_blank" rel="noopener">here</a>.</p>
+<h2 id="hexo-global-license">hexo-global-license</h2>
+<ul>
+<li><p>Add the global license helper to your theme template</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- globalLicense(config) %&gt;</span><br></pre></td></tr></table></figure></li>
+<li><p>Add settings to the Hexo configuration file</p>
+<ul>
+<li>licenseType: Specify the type of Creative Commons license, or custom
+<ul>
+<li>by: CC Attribution</li>
+<li>by-nd: CC Attribution-NoDerivatives</li>
+<li>by-sa: CC Attribution-ShareAlike</li>
+<li>by-nc: CC Attribution-NonCommercial</li>
+<li>by-nc-nd: CC Attribution-NonCommercial-NoDerivatives</li>
+<li>by-nc-sa: CC Attribution-NonCommercial-ShareAlike</li>
+<li>custom: Specify your own custom license HTML</li>
+</ul></li>
+<li>licenseIconSize: Specify the size of the Creative Commons image
+<ul>
+<li>normal</li>
+<li>small</li>
+</ul></li>
+<li>customLicense: The markup and text of a custom license statement; only needed when licenseType is set to 'custom'</li>
+</ul></li>
+<li><p>Examples</p>
+<ul>
+<li><p>Creative Commons <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">licenseType: by-sa</span><br><span class="line">licenseIconSize: normal</span><br></pre></td></tr></table></figure></p></li>
+<li><p>Custom</p></li>
+</ul>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">licenseType: custom</span><br><span class="line">customLicense: &lt;div&gt;My custom license text.&lt;/div&gt;</span><br></pre></td></tr></table></figure></p></li>
+</ul>
+<h2 id="hexo-spoiler">hexo-spoiler</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">{% spoiler [text] %}</span><br></pre></td></tr></table></figure>
+<p>It will pixelate your text, and click to reveal. Click again to hide your text again.</p>
+<p>But you need to add <code>&lt;br&gt;</code> manually if you want line breaks after/before it.</p>
+<h2 id="hexo-tag-bilibili">hexo-tag-bilibili</h2>
+<h3 id="usage">Usage</h3>
+<p>The full tag format is as follows:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">{% bilibili [av_id] %}</span><br><span class="line">or</span><br><span class="line">{% bilibili [av_id] [page] %}</span><br></pre></td></tr></table></figure>
+<p>​example:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">{% bilibili 2333333 3 %}</span><br></pre></td></tr></table></figure>
+<h3 id="configuration">Configuration</h3>
+<p>You can configure the type, autoplay and size in your main _config.yml:</p>
+<p>Example configuration:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">bilibili:</span><br><span class="line">	width: 452</span><br><span class="line">	height: 544</span><br></pre></td></tr></table></figure>
+<h3 id="style">Style</h3>
+<p>The Video Clip is wrapped by a div with the class <code>bili_video</code>. You can modify it in your theme's css files.</p>
+<h2 id="hexo-tag-echarts3">hexo-tag-echarts3</h2>
+<p>在文章内使用 ECharts 的 <code>tag</code> 就可以了：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">{% echarts 400 '85%' %}</span><br><span class="line">\\TODO option goes here</span><br><span class="line">{% endecharts %}</span><br></pre></td></tr></table></figure>
+<h2 id="hexo-tag-mmedia">hexo-tag-mmedia</h2>
+<p>见<a href="https://easyhexo.com/3-Plugins-use-and-config/3-5-hexo-tag-mmedia/#简介" target="_blank" rel="noopener">官方文档</a></p>
+<h2 id="hexo-tag-wikipedia">hexo-tag-wikipedia</h2>
+<h3 id="example">Example</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">{% wikipedia title:GitHub wikiButton:true %}</span><br></pre></td></tr></table></figure>
+<p><a href="https://raw.githubusercontent.com/tuanna-hsp/file-hosting/master/Repo/hexo-tag-wikipedia-ss1.png" target="_blank" rel="noopener"><img src="D:/%E7%8E%8B%E6%A5%9A%E5%B1%B9/Hexo/sunxling.gitlab.io/source/images/hexo-tag-wikipedia-ss1.png" alt="img"></a></p>
+<h3 id="available-parameters">Available parameters</h3>
+<table>
+<colgroup>
+<col style="width: 25%">
+<col style="width: 75%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>title:&lt;wiki_title&gt;</code></td>
+<td>For example with the wiki URL https://en.wikipedia.org/wiki/Star_Wars, it is 'Star_Wars'</td>
+</tr>
+<tr class="even">
+<td><code>wikiButton:&lt;true&gt;</code></td>
+<td>Whether or not to show the Wikipedia page link. Default to <code>false</code></td>
+</tr>
+<tr class="odd">
+<td><code>lang:&lt;code&gt;</code></td>
+<td>The wiki page language code. <code>en</code>, <code>fr</code>, <code>ja</code>... Default to <code>en</code></td>
+</tr>
+<tr class="even">
+<td><code>sentences:&lt;number&gt;</code></td>
+<td>Limit the number of sentences to show if specified. Only accept value from 1 to 10. Omit to show the full extract</td>
+</tr>
+</tbody>
+</table>
+<h2 id="hexo-tag-youtube-responsive">hexo-tag-youtube-responsive</h2>
+<h3 id="embed-a-video">Embed a video</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">{% youtuber video VIDEO_ID %}</span><br></pre></td></tr></table></figure>
+<h3 id="embed-a-playlist">Embed a playlist</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">{% youtuber playlist PLAYLIST_ID %}</span><br></pre></td></tr></table></figure>
+<h3 id="embed-search-results-of-a-query">Embed search results of a query</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">{% youtuber search QUERY_KEYWORDS %}</span><br></pre></td></tr></table></figure>
+<h3 id="embed-a-users-uploaded-videos-a.k.a.-channel">Embed a user's uploaded videos (a.k.a. channel)</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">{% youtuber user USERNAME %}</span><br></pre></td></tr></table></figure>
+<h3 id="parameters">Parameters</h3>
+<p>You may specify additional parameters in YAML format as</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">{% youtuber video VIDEO_ID %}</span><br><span class="line">  allowfullscreen: yes,</span><br><span class="line">  autoplay: 1,</span><br><span class="line">  cc_lang_pref: fr,</span><br><span class="line">  cc_load_policy: 1,</span><br><span class="line">  color: white,</span><br><span class="line">  controls: 0,</span><br><span class="line">  disablekb: 1,</span><br><span class="line">  enablejsapi: 1,</span><br><span class="line">  end: 210,</span><br><span class="line">  frameborder: 20,</span><br><span class="line">  fs: 0,</span><br><span class="line">  height: 480,</span><br><span class="line">  hl: fr,</span><br><span class="line">  iv_load_policy: 3,</span><br><span class="line">  loop: 1,</span><br><span class="line">  modestbranding: 1,</span><br><span class="line">  origin: your-domain,</span><br><span class="line">  playlist: "videoId1,videoId2,videoId3",</span><br><span class="line">  playsinline: 0,</span><br><span class="line">  privacy_mode: yes,</span><br><span class="line">  rel: 1,</span><br><span class="line">  showinfo: 0,</span><br><span class="line">  start: 30,</span><br><span class="line">  widget_referrer: https://your-domain.com/some-page,</span><br><span class="line">  width: 640,</span><br><span class="line">{% endyoutuber %}</span><br></pre></td></tr></table></figure>
+<p>The majority of the parameters can be found in <a href="https://developers.google.com/youtube/player_parameters" target="_blank" rel="noopener">Youtube documentation</a>.</p>
+<p>For the remaining:</p>
+<ul>
+<li>If <code>width</code> and <code>height</code> are given as dimension of the player, it will cancel the auto-resize feature of this widget</li>
+<li><code>frameborder</code> allows to specify the edge thickness around the player</li>
+<li><code>privacy_mode</code> allows to play video without being tracked by google (no cookies used)</li>
+<li><code>allowfullscreen</code> let the user switch on the full screen mode if desired</li>
+</ul>
+<h3 id="defaults">Defaults</h3>
+<p>The parameters above can be specified globally with default values via <code>_config.yml</code> file.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">youtuber:</span><br><span class="line">  allowfullscreen: yes,</span><br><span class="line">  autoplay: 1</span><br></pre></td></tr></table></figure>
+<h2 id="hexo-ruby-character">hexo-ruby-character</h2>
+<figure>
+<img src="D:/%E7%8E%8B%E6%A5%9A%E5%B1%B9/Hexo/sunxling.gitlab.io/source/images/1584962683058.png" alt=""><figcaption>1584962683058</figcaption>
+</figure>
+<h2 id="hexo-infinite-scroll">hexo-infinite-scroll</h2>
+<h3 id="install-usage">Install &amp; Usage</h3>
+<p>Check <code>head.ejs</code>(or <code>head.swig</code>) in the theme folder and add:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@2.0.0/dist/main.js"&gt;&lt;/script&gt; </span><br><span class="line">&lt;script&gt;</span><br><span class="line">    infiniteScroll()</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="tips">Tips</h3>
+<p>In case not working, please check <code>_config.yml</code> and set all the <code>per_page</code> to 0 to disable pagination.</p>
+<h3 id="config">Config</h3>
+<table>
+<thead>
+<tr class="header">
+<th>key</th>
+<th>description</th>
+<th>default</th>
+<th>type</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>post</td>
+<td>selector of post</td>
+<td>'.post'</td>
+<td>string</td>
+</tr>
+<tr class="even">
+<td>showNum</td>
+<td>posts show number per scroll</td>
+<td>3</td>
+<td>number</td>
+</tr>
+<tr class="odd">
+<td>loadTime</td>
+<td>loading animation show time(ms)</td>
+<td>400</td>
+<td>number</td>
+</tr>
+<tr class="even">
+<td>style</td>
+<td>class Name of loader</td>
+<td>'line-scale'</td>
+<td>string</td>
+</tr>
+<tr class="odd">
+<td>color</td>
+<td>color of loader</td>
+<td>'#f78769'</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h3 id="about-loaders">About Loaders</h3>
+<p>Loaders are all generated through <a href="https://github.com/ConnorAtherton/loaders.css" target="_blank" rel="noopener">loaders.css</a> by ConnorAtherton. <a href="https://connoratherton.com/loaders" target="_blank" rel="noopener">Click to preview</a> and pick up what you like. Then set its className to the config, for example:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">infiniteScroll({</span><br><span class="line">    style: 'ball-pulse'</span><br><span class="line">})</span><br></pre></td></tr></table></figure>
+<h1 id="主题">主题</h1>
+<h1 id="杂七杂八">杂七杂八</h1>
+<h2 id="淘宝npm镜像">淘宝npm镜像</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+<h2 id="gitlab-ci安装pandoc">Gitlab CI安装pandoc</h2>
+<p>总是报错</p>
+<p>搞得我欲仙欲死</p>
+<p>后来发现问题在于用的image是node10:alpine，基于Alpine Linux，所以把yml中的<code>node:10-alpine</code>换成<code>node:13</code>即可</p>
+<svg style="display: none" id="MJX-SVG-global-cache"><defs></defs></svg>
+        
+      <blockquote class="mdui-m-t-5">
+        
+        <strong>本文链接：</strong><a href="http://sunxling.gitee.io/32GCGHH/">http://sunxling.gitee.io/32GCGHH/</a>
+      </blockquote>
+      
+    </div>
+    <footer class="mdui-card-actions">
+      
+      
+        <a class="mdui-ripple article_tags-link" href="/tags/hexo/" rel="tag">hexo</a>
+      
+    </footer>
+    
+  </article>
+  
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+  <script>$("#main article .mdui-card-content img.fancybox").on("click",function(e){$.fancybox.open({src:$(this).attr("src")});});</script>
+
+
+  <nav id="paginator">
+    
+    <div class="spacer"></div>
+    
+      <a rel="next" class="extend next" href="/3NZS4HV/">
+        下一篇&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button aria-label="next" class="mdui-btn mdui-btn-raised mdui-btn-dense mdui-btn-icon mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_forward</i></button>
+      </a>
+    
+  </nav>
+
+
+  <div id="comment" class="mdui-m-t-5">
+    <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+    clientID: 'ae77d4312c9ca39aa834',
+    clientSecret: 'b1c687127b639f792fdfe176de52f6970594703a',
+    repo: 'sunxling.github.io',
+    owner: 'sunxling',
+    admin: ['sunxling'],
+    id: location.pathname,
+    distractionFreeMode: false
+  });
+  gitalk.render('gitalk-container');
+</script>
+  </div>
+
+
+
+  <div style="position: fixed !important; right: 16px; top: 30%;">
+    <button class="mdui-fab mdui-fab-mini mdui-ripple" mdui-menu="{target: '#toc'}"><i class="mdui-icon material-icons">format_list_numbered</i></button>
+    <ul class="mdui-menu" id="toc">
+      <li class="mdui-menu-item" disabled><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#基础配置"><span class="toc-number">1.</span> <span class="toc-text">基础配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#初始化hexo"><span class="toc-number">1.1.</span> <span class="toc-text">初始化Hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#出现报错"><span class="toc-number">1.1.1.</span> <span class="toc-text">出现报错</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#初始化仓库"><span class="toc-number">1.2.</span> <span class="toc-text">初始化仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#如何重新输入账户密码"><span class="toc-number">1.2.1.</span> <span class="toc-text">如何重新输入账户密码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置gitlab-ci"><span class="toc-number">1.3.</span> <span class="toc-text">配置Gitlab CI</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#插件"><span class="toc-number">2.</span> <span class="toc-text">插件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#hexagon"><span class="toc-number">2.1.</span> <span class="toc-text">hexagon</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装"><span class="toc-number">2.1.1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用方法"><span class="toc-number">2.1.2.</span> <span class="toc-text">使用方法：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装插件"><span class="toc-number">2.1.2.1.</span> <span class="toc-text">安装插件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#安装主题"><span class="toc-number">2.1.2.2.</span> <span class="toc-text">安装主题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#列出目前所有的插件和主题"><span class="toc-number">2.1.2.3.</span> <span class="toc-text">列出目前所有的插件和主题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#帮助"><span class="toc-number">2.1.2.4.</span> <span class="toc-text">帮助</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hexo-generator-feed"><span class="toc-number">2.1.3.</span> <span class="toc-text">hexo-generator-feed</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装-1"><span class="toc-number">2.1.3.1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#选项"><span class="toc-number">2.1.3.2.</span> <span class="toc-text">选项</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo-tag-cloud"><span class="toc-number">2.2.</span> <span class="toc-text">hexo-tag-cloud</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo-asset-image-fixed"><span class="toc-number">2.3.</span> <span class="toc-text">hexo-asset-image-fixed</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo-pdf"><span class="toc-number">2.4.</span> <span class="toc-text">hexo-pdf</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#normal-pdf"><span class="toc-number">2.4.1.</span> <span class="toc-text">Normal PDF</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#google-drive"><span class="toc-number">2.4.2.</span> <span class="toc-text">Google drive</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#slideshare"><span class="toc-number">2.4.3.</span> <span class="toc-text">Slideshare</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo-fun-time"><span class="toc-number">2.5.</span> <span class="toc-text">hexo-fun-time</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#simple-usage"><span class="toc-number">2.5.1.</span> <span class="toc-text">simple Usage</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#disable-render"><span class="toc-number">2.5.2.</span> <span class="toc-text">disable render</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#change-default-style"><span class="toc-number">2.5.3.</span> <span class="toc-text">change default style</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#custom-data-resource"><span class="toc-number">2.5.4.</span> <span class="toc-text">custom data resource</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo-global-license"><span class="toc-number">2.6.</span> <span class="toc-text">hexo-global-license</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo-spoiler"><span class="toc-number">2.7.</span> <span class="toc-text">hexo-spoiler</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo-tag-bilibili"><span class="toc-number">2.8.</span> <span class="toc-text">hexo-tag-bilibili</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#usage"><span class="toc-number">2.8.1.</span> <span class="toc-text">Usage</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#configuration"><span class="toc-number">2.8.2.</span> <span class="toc-text">Configuration</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#style"><span class="toc-number">2.8.3.</span> <span class="toc-text">Style</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo-tag-echarts3"><span class="toc-number">2.9.</span> <span class="toc-text">hexo-tag-echarts3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo-tag-mmedia"><span class="toc-number">2.10.</span> <span class="toc-text">hexo-tag-mmedia</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo-tag-wikipedia"><span class="toc-number">2.11.</span> <span class="toc-text">hexo-tag-wikipedia</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#example"><span class="toc-number">2.11.1.</span> <span class="toc-text">Example</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#available-parameters"><span class="toc-number">2.11.2.</span> <span class="toc-text">Available parameters</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo-tag-youtube-responsive"><span class="toc-number">2.12.</span> <span class="toc-text">hexo-tag-youtube-responsive</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#embed-a-video"><span class="toc-number">2.12.1.</span> <span class="toc-text">Embed a video</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#embed-a-playlist"><span class="toc-number">2.12.2.</span> <span class="toc-text">Embed a playlist</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#embed-search-results-of-a-query"><span class="toc-number">2.12.3.</span> <span class="toc-text">Embed search results of a query</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#embed-a-users-uploaded-videos-a.k.a.-channel"><span class="toc-number">2.12.4.</span> <span class="toc-text">Embed a user&#39;s uploaded videos (a.k.a. channel)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#parameters"><span class="toc-number">2.12.5.</span> <span class="toc-text">Parameters</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#defaults"><span class="toc-number">2.12.6.</span> <span class="toc-text">Defaults</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo-ruby-character"><span class="toc-number">2.13.</span> <span class="toc-text">hexo-ruby-character</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo-infinite-scroll"><span class="toc-number">2.14.</span> <span class="toc-text">hexo-infinite-scroll</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#install-usage"><span class="toc-number">2.14.1.</span> <span class="toc-text">Install &amp; Usage</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tips"><span class="toc-number">2.14.2.</span> <span class="toc-text">Tips</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#config"><span class="toc-number">2.14.3.</span> <span class="toc-text">Config</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#about-loaders"><span class="toc-number">2.14.4.</span> <span class="toc-text">About Loaders</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#主题"><span class="toc-number">3.</span> <span class="toc-text">主题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#杂七杂八"><span class="toc-number">4.</span> <span class="toc-text">杂七杂八</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#淘宝npm镜像"><span class="toc-number">4.1.</span> <span class="toc-text">淘宝npm镜像</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#gitlab-ci安装pandoc"><span class="toc-number">4.2.</span> <span class="toc-text">Gitlab CI安装pandoc</span></a></li></ol></li></ol></li>
+    </ul>
+  </div>
+
+</main>
+  <footer id="footer" class="mdui-m-t-5 mdui-p-y-3 mdui-color-theme">
+  <div class="mdui-p-y-0 mdui-text-center">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </div>
+  <div class="mdui-p-y-1 mdui-text-center">
+    Copyright &copy; 2019 - 2020 sunxl<br>
+    Powered by <a href="https://hexo.io/" target="_blank" class="mdui-text-color-theme-accent">Hexo</a>
+    
+  </div>
+</footer>
+  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">arrow_upward</i></button>
+  
+  
+<script src="/js/mdui.js"></script>
+<script src="/js/script.js"></script>
+
+</body>
+</html>
