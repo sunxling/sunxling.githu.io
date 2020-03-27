@@ -8,30 +8,42 @@
   <meta name="renderer" content="webkit">
 
   
-  <title>归档: 2020/3 | xling的博客</title>
+  <title>实验三 OpenFlow协议分析 | xling的博客</title>
 
   <link rel="shortcut icon" href="/images/favicon.png">
   <link rel="alternate" href="/atom.xml" title="xling的博客">
-  <meta name="description" content="Communication Network notes">
-<meta property="og:type" content="website">
-<meta property="og:title" content="xling的博客">
-<meta property="og:url" content="http://sunxling.gitee.io/archives/2020/03/">
+  <meta name="description" content="​ 抓包进行OpenFlow协议分析，原理性学习的最佳方案.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="实验三 OpenFlow协议分析">
+<meta property="og:url" content="http://sunxling.gitee.io/4Y1FXH/">
 <meta property="og:site_name" content="xling的博客">
-<meta property="og:description" content="Communication Network notes">
+<meta property="og:description" content="​ 抓包进行OpenFlow协议分析，原理性学习的最佳方案.">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://sunxling.gitee.io/images/wpsE3662S.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/images/wpsktoVHz.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/images/wpszT1NOm.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/images/wps0vvh6d.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/images/wpsQGPGYY.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/images/wpsToG9nY.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/images/wps2r6yWn.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/images/wpsu6t6QV.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/images/wps4YdAjZ.jpg">
+<meta property="article:published_time" content="2020-03-26T12:59:06.837Z">
+<meta property="article:modified_time" content="2020-03-27T12:46:13.365Z">
 <meta property="article:author" content="sunxl">
 <meta property="article:tag" content="hexo">
 <meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://sunxling.gitee.io/images/wpsE3662S.jpg">
 
   <meta name="format-detection" content="telephone=no,email=no">
   <meta name="theme-color" content="#9C27B0">
-  <meta name="description" content="Communication Network notes">
+  <meta name="description" content="​ 抓包进行OpenFlow协议分析，原理性学习的最佳方案.">
   <meta name="keywords" content="">
 
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="application-name" content="xling的博客">
-  <meta name="msapplication-starturl" content="http://sunxling.gitee.io/archives/2020/03/">
+  <meta name="msapplication-starturl" content="http://sunxling.gitee.io/4Y1FXH/">
   <meta name="msapplication-navbutton-color" content="#9C27B0">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="xling的博客">
@@ -39,9 +51,12 @@
   <link rel="apple-touch-icon" href="/images/favicon.png">
 
   
+    <meta property="article:published_time" content="Thu Mar 26 2020 20:59:06 GMT+0800">
+    <meta property="article:modified_time" content="Fri Mar 27 2020 20:46:13 GMT+0800">
+  
 
   
-    <link rel="canonical" href="http://sunxling.gitee.io/archives/2020/03/">
+    <link rel="canonical" href="http://sunxling.gitee.io/4Y1FXH/">
   
 
   
@@ -419,53 +434,147 @@ mjx-container + br {
 </aside>
 
   <main id="main" class="mdui-m-t-5 fadeIn animated">
+  
+<link rel="stylesheet" href="https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.css">
 
-  <article class="mdui-card mdui-m-b-5 mdui-hoverable">
-    <a href="/32GCGHH/">
-      <header class="mdui-card-media mdui-ripple">
-        <img src="/images/random/material-16.png" style="max-height: 240px;">
-        <div class="mdui-card-media-covered">
-          <div class="mdui-card-primary">
-            <div class="mdui-card-primary-title">捣鼓新的博客</div>
-            <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2020-03-27 / <i class="iconfont">&#xe601;</i> sunxling</div>
-          </div>
+  <style>#main article .mdui-card-content .center-block{display:block!important;margin-right:auto!important;margin-left:auto!important}</style>
+  <article class="mdui-card mdui-m-b-5">
+    <header class="mdui-card-media">
+      <img src="/images/random/material-16.png" style="max-height: 240px;">
+      <div class="mdui-card-media-covered">
+        <div class="mdui-card-primary">
+          <div class="mdui-card-primary-title">实验三 OpenFlow协议分析</div>
+          <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2020-03-26 / <i class="iconfont">&#xe601;</i> sunxling</div>
         </div>
-      </header>
-    </a>
+      </div>
+      <div class="mdui-card-menu">
+        
+          <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-menu="{target: '#qrcode', align: 'right'}"><i class="mdui-icon material-icons">devices</i></button>
+          <ul class="mdui-menu" id="qrcode">
+            
+              <li class="mdui-menu-item"><a class="mdui-text-center mdui-ripple">Send to mobile phone</a></li>
+            
+            <li class="mdui-menu-item" disabled>
+              
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAAB2UlEQVR42u3aW1KEUAwE0Nn/pnUH0EnAEXL4srQEDh9dedzPzyuuDwYGBgYGBgbGv2F84mvyX72/nrwDBgbGMsZJtB0yEt7xs5rvgIGBsZKRPD4JzeSle/fHwMDAyBnVOM7vgIGBgXFt4OaYpCXGwMDAuKqJzRvaBPm1XhwDA+OBjOqI/46f/3S/gYGB8ShG+YjDgFoN+hvPjGBgYDyKkQdfPlA7Zvc+DQYGxmZGHoXV1WOv+MsDGgMDYw9jfthiHtnV0RsGBsZOxlXD/fyFkiXoye8xMDDWMOZlX04qhGmvicXAwHgpI39YeRwWF4W9BQMGBsYeRi8u5wvI46dHxSUGBsYyRh6UvbIyH+2NmlgMDIyVjMmKsboozT8cBgbGNka14KsuL/PhXX4HDAwMjGqYTjA3LgYwMDAWMJKxfq/gq7504cwIBgbGAka+qkwOW1Qb46TcxMDA2MmYrxt768zqkQ4MDIzNjGoIzsvE6jCu0MRiYGC8mlEN2Xmj2zu6gYGBgVENxPxDVEvAKO4xMDAw4tVjdYWZF38nsY6BgYERMPLlwfyI2I2Bi4GB8SjGfIifNLe9mMbAwMDoHYDoDcuqgXvLfgMDA+NRjOdeGBgYGBgYGBhfvX4B+PGhXoztYogAAAAASUVORK5CYII=">
+              
+            </li>
+          </ul>
+        
+        
+          <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="mdui-icon material-icons">share</i></button>
+          <ul class="mdui-menu" id="share_menu">
+            <li class="mdui-menu-item">
+              <a href="http://service.weibo.com/share/share.php?appkey=&title=实验三 OpenFlow协议分析&url=http://sunxling.gitee.io/4Y1FXH/&pic=http://sunxling.gitee.io/images/favicon.png&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到微博</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://twitter.com/intent/tweet?text=实验三 OpenFlow协议分析&url=http://sunxling.gitee.io/4Y1FXH/&via=sunxl" target="_blank" class="mdui-ripple">分享到Twitter</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=http://sunxling.gitee.io/4Y1FXH/" target="_blank" class="mdui-ripple">分享到Facebook</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://plus.google.com/share?url=http://sunxling.gitee.io/4Y1FXH/" target="_blank" class="mdui-ripple">分享到Google+</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://sunxling.gitee.io/4Y1FXH/&title=实验三 OpenFlow协议分析" target="_blank" class="mdui-ripple">分享到LinkedIn</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="http://connect.qq.com/widget/shareqq/index.html?site=xling的博客&title=实验三 OpenFlow协议分析&summary=Communication Network notes&pics=http://sunxling.gitee.io/images/favicon.png&url=http://sunxling.gitee.io/4Y1FXH/" target="_blank" class="mdui-ripple">分享到QQ</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://telegram.me/share/url?url=http://sunxling.gitee.io/4Y1FXH/&text=实验三 OpenFlow协议分析" target="_blank" class="mdui-ripple">分享到Telegram</a>
+            </li>
+          </ul>
+        
+      </div>
+    </header>
     <div class="mdui-card-content mdui-typo">
+        
+            <p>​ 抓包进行OpenFlow协议分析，原理性学习的最佳方案.</p>
+<a id="more"></a>
+<h3 id="实验目的">实验目的</h3>
+<p>搭建SDN环境；学习控制器下发流表操作，使用wireshark抓包分析OpenFlow1.0协议</p>
+<h3 id="实验内容">实验内容</h3>
+<ol type="1">
+<li>本实验在熟悉SDN的基础上，通过wireshark抓包工具分析OpenFlow（以下简写为OF）消息过程和格式。具体的OF官方协议及白皮书可在资料库栏目中下载阅读。</li>
+<li>熟悉Flow-Mod消息触发场景。</li>
+<li>掌握Flow-Mod消息格式和常用字段含义。</li>
+<li>掌握OpenFlow交换机发送Packet-in消息过程及其消息格式。</li>
+<li>掌握OpenFlow控制器发送Packet-out消息过程及其消息格式。</li>
+</ol>
+<p>注：此文涉及的环境仅支持OF1.0版本，对于OF1.2、OF1.3版本可用其他平台测试。</p>
+<h3 id="实验环境">实验环境</h3>
+<p>电脑一台，Windows系统，其中安装：</p>
+<ol type="1">
+<li><p>VMware workstation中挂载Ubuntu16.04系统</p></li>
+<li><p>Ubuntu系统中安装以下软件：</p></li>
+</ol>
+<p>​ ①　抓包软件Wireshark</p>
+<p>​ ②　网络仿真软件Mininet</p>
+<p>​ ③　控制器Ryu</p>
+<h3 id="实验步骤">实验步骤</h3>
+<ol type="1">
+<li>登录系统：</li>
+</ol>
+<p>打开VMware workstation，启动虚拟机RYU。</p>
+<ol start="2" type="1">
+<li><p>启动ryu：</p>
+<ol type="1">
+<li><p>进入ryu窗口</p></li>
+<li><p>输入命令：<code>sudo ryu-manager  simple_switch.py</code></p></li>
+</ol></li>
+<li><p>启动WireShark</p>
+<ol type="1">
+<li><p>使用快捷键Ctrl+Alt+t打开一个新Term窗口</p></li>
+<li><p>输入：<code>sudo wireshark</code></p></li>
+<li><p>选择any</p></li>
+</ol></li>
+<li><p>启动Mininet（此例中使用实验一中脚本定义的拓扑文件mytopo.py）</p>
+<ol type="1">
+<li><p>进入mininet窗口</p></li>
+<li><p>输入命令：<code>sudo mn --custom /home/zq/B0199/mytopo.py --topo mytopo --controller=remote,ip=127.0.0.1,port=6633</code></p></li>
+</ol></li>
+<li><p>在WireShark中过滤openflow_v1 和 tcp包，查看OpenFlow初始化过程并分析</p></li>
+</ol>
+<figure>
+<img src="../../images/wpsE3662S.jpg" alt=""><figcaption>img</figcaption>
+</figure>
+<p>由上画出OpenFlow的初始化过程图，并解释其过程：</p>
+<ol start="6" type="1">
+<li><p>查看OpenFlow报文并说明其功能：</p>
+<ol type="1">
+<li>Hello报文</li>
+</ol>
+<p><img src="../../images/wpsktoVHz.jpg" alt="img"> (2) OFPT_FEATURES_REQUEST报文和OFPT_FEATURES_REPLY报文</p></li>
+</ol>
+<figure>
+<img src="../../images/wpszT1NOm.jpg" alt=""><figcaption>img</figcaption>
+</figure>
+<figure>
+<img src="../../images/wps0vvh6d.jpg" alt=""><figcaption>img</figcaption>
+</figure>
+<p>​ (3) OFPT_ECHO_REQUEST报文和OFPT_ECHO_REPLY报文</p>
+<p><img src="../../images/wpsQGPGYY.jpg" alt="img"> <img src="../../images/wpsToG9nY.jpg" alt="img"></p>
+<p>​ (4) OFPT_PACKET_IN报文和OFPT_PACKET_OUT报文</p>
+<p><img src="../../images/wps2r6yWn.jpg" alt="img"> <img src="../../images/wpsu6t6QV.jpg" alt="img"></p>
+<ol start="7" type="1">
+<li><p>在mininet窗口执行h1 ping h3，查看wireshark窗口报文变化</p>
+<ol type="1">
+<li>出现四条OPFT_FLOW_MOD报文，查看报文内容</li>
+</ol></li>
+</ol>
+<figure>
+<img src="../../images/wps4YdAjZ.jpg" alt=""><figcaption>img</figcaption>
+</figure>
+<p>​ 分析h1--&gt;h3方向发送数据包的过程中，交换机和控制器的工作过程。</p>
+<svg style="display: none" id="MJX-SVG-global-cache"><defs></defs></svg>
+        
+      <blockquote class="mdui-m-t-5">
+        
+        <strong>本文链接：</strong><a href="http://sunxling.gitee.io/4Y1FXH/">http://sunxling.gitee.io/4Y1FXH/</a>
+      </blockquote>
       
-        儿子贴过来的内容，以期望帮助我这个老母亲多少学一点博客的基础知识。
-      
-      <a href="/32GCGHH/">阅读更多 >></a>
-    </div>
-    <footer class="mdui-card-actions">
-      
-      
-        <a class="mdui-ripple article_tags-link" href="/tags/hexo/" rel="tag">hexo</a>
-      
-    </footer>
-  </article>
-
-  <article class="mdui-card mdui-m-b-5 mdui-hoverable">
-    <a href="/3NZS4HV/">
-      <header class="mdui-card-media mdui-ripple">
-        <img src="/images/random/material-16.png" style="max-height: 240px;">
-        <div class="mdui-card-media-covered">
-          <div class="mdui-card-primary">
-            <div class="mdui-card-primary-title">实验一 Mininet搭建自定义网络</div>
-            <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2020-03-26 / <i class="iconfont">&#xe601;</i> sunxling</div>
-          </div>
-        </div>
-      </header>
-    </a>
-    <div class="mdui-card-content mdui-typo">
-      
-        写在正文之前：
-同事的一个项目，有幸借此学习了一点新知识。
-此系列实验只是入门级，非常简单，仅限于熟悉SDN环境，了解基本命令，所以设计的傻瓜版。
-目前网络上已经有了Web版SDN实验平台，设计得更加丰富。
-      
-      <a href="/3NZS4HV/">阅读更多 >></a>
     </div>
     <footer class="mdui-card-actions">
       
@@ -473,85 +582,58 @@ mjx-container + br {
       
       
     </footer>
+    
   </article>
+  
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
-  <article class="mdui-card mdui-m-b-5 mdui-hoverable">
-    <a href="/3WZ0WA2/">
-      <header class="mdui-card-media mdui-ripple">
-        <img src="/images/random/material-8.png" style="max-height: 240px;">
-        <div class="mdui-card-media-covered">
-          <div class="mdui-card-primary">
-            <div class="mdui-card-primary-title">实验二 流表应用</div>
-            <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2020-03-26 / <i class="iconfont">&#xe601;</i> sunxling</div>
-          </div>
-        </div>
-      </header>
-    </a>
-    <div class="mdui-card-content mdui-typo">
-      
-        流表应用，还可以再拓展，增加一些东西的，后面有空再搞吧
-      
-      <a href="/3WZ0WA2/">阅读更多 >></a>
-    </div>
-    <footer class="mdui-card-actions">
-      
-        <a class="mdui-ripple article_categories-link" href="/categories/SDN%E5%AE%9E%E9%AA%8C/">SDN实验</a>
-      
-      
-    </footer>
-  </article>
+  <script>$("#main article .mdui-card-content img.fancybox").on("click",function(e){$.fancybox.open({src:$(this).attr("src")});});</script>
 
-  <article class="mdui-card mdui-m-b-5 mdui-hoverable">
-    <a href="/4Y1FXH/">
-      <header class="mdui-card-media mdui-ripple">
-        <img src="/images/random/material-1.png" style="max-height: 240px;">
-        <div class="mdui-card-media-covered">
-          <div class="mdui-card-primary">
-            <div class="mdui-card-primary-title">实验三 OpenFlow协议分析</div>
-            <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2020-03-26 / <i class="iconfont">&#xe601;</i> sunxling</div>
-          </div>
-        </div>
-      </header>
-    </a>
-    <div class="mdui-card-content mdui-typo">
-      
-        ​ 抓包进行OpenFlow协议分析，原理性学习的最佳方案.
-      
-      <a href="/4Y1FXH/">阅读更多 >></a>
-    </div>
-    <footer class="mdui-card-actions">
-      
-        <a class="mdui-ripple article_categories-link" href="/categories/SDN%E5%AE%9E%E9%AA%8C/">SDN实验</a>
-      
-      
-    </footer>
-  </article>
 
-  <article class="mdui-card mdui-m-b-5 mdui-hoverable">
-    <a href="/151FCAP/">
-      <header class="mdui-card-media mdui-ripple">
-        <img src="/images/random/material-9.png" style="max-height: 240px;">
-        <div class="mdui-card-media-covered">
-          <div class="mdui-card-primary">
-            <div class="mdui-card-primary-title">Hello World</div>
-            <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2020-03-25 / <i class="iconfont">&#xe601;</i> sunxling</div>
-          </div>
-        </div>
-      </header>
-    </a>
-    <div class="mdui-card-content mdui-typo">
-      
-        Welcome to Hexo
-      
-      <a href="/151FCAP/">阅读更多 >></a>
-    </div>
-    <footer class="mdui-card-actions">
-      
-      
-        <a class="mdui-ripple article_tags-link" href="/tags/hexo/" rel="tag">hexo</a>
-      
-    </footer>
-  </article>
+  <nav id="paginator">
+    
+      <a rel="prev" class="extend prev" href="/3WZ0WA2/">
+        <button aria-label="prev" class="mdui-btn mdui-btn-raised mdui-btn-dense mdui-btn-icon mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_back</i></button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上一篇
+      </a>
+    
+    <div class="spacer"></div>
+    
+      <a rel="next" class="extend next" href="/151FCAP/">
+        下一篇&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button aria-label="next" class="mdui-btn mdui-btn-raised mdui-btn-dense mdui-btn-icon mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_forward</i></button>
+      </a>
+    
+  </nav>
+
+
+  <div id="comment" class="mdui-m-t-5">
+    <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+    clientID: 'ae77d4312c9ca39aa834',
+    clientSecret: 'b1c687127b639f792fdfe176de52f6970594703a',
+    repo: 'sunxling.github.io',
+    owner: 'sunxling',
+    admin: ['sunxling'],
+    id: location.pathname,
+    distractionFreeMode: false
+  });
+  gitalk.render('gitalk-container');
+</script>
+  </div>
+
+
+
+  <div style="position: fixed !important; right: 16px; top: 30%;">
+    <button class="mdui-fab mdui-fab-mini mdui-ripple" mdui-menu="{target: '#toc'}"><i class="mdui-icon material-icons">format_list_numbered</i></button>
+    <ul class="mdui-menu" id="toc">
+      <li class="mdui-menu-item" disabled><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#实验目的"><span class="toc-number">1.</span> <span class="toc-text">实验目的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实验内容"><span class="toc-number">2.</span> <span class="toc-text">实验内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实验环境"><span class="toc-number">3.</span> <span class="toc-text">实验环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实验步骤"><span class="toc-number">4.</span> <span class="toc-text">实验步骤</span></a></li></ol></li>
+    </ul>
+  </div>
 
 </main>
   <footer id="footer" class="mdui-m-t-5 mdui-p-y-3 mdui-color-theme">
