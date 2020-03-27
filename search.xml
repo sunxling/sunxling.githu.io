@@ -7,6 +7,7 @@
 <p>同事的一个项目，有幸借此学习了一点新知识。</p>
 <p>这个实验只是入门级，非常简单，仅限于熟悉SDN环境，了解基本命令，所以设计的傻瓜版。</p>
 <p>目前网络上已经有了Web版，设计得更加丰富。</p>
+<a id="more"></a>
 <h1 id="软件定义网络sdn实验">软件定义网络（SDN）实验</h1>
 <h2 id="实验一-mininet搭建自定义网络">实验一 Mininet搭建自定义网络</h2>
 <h3 id="实验目的">实验目的</h3>
@@ -40,39 +41,39 @@
 <p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mn --topo linear,4</span><br></pre></td></tr></table></figure></p>
 <p>​ ② 输出结果：</p>
 <figure>
-<img src="../images/wpsMckMhk.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsMckMhk.jpg" alt="" /><figcaption>img</figcaption>
 </figure>
 <p>​ 可在mininet&gt;后输入一些命令，查看创建的拓扑情况</p>
 <ul>
 <li><p>nodes：查看网络中的节点</p>
 <figure>
-<img src="../images/wpsZH5bqr.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsZH5bqr.jpg" alt="" /><figcaption>img</figcaption>
 </figure></li>
 <li><p>net：查看链接信息</p>
 <figure>
-<img src="../images/wpsE2wjQf.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsE2wjQf.jpg" alt="" /><figcaption>img</figcaption>
 </figure></li>
 <li><p>links：查看链路的健壮性（链路状态）</p>
 <figure>
-<img src="../images/wpsjBjCJg.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsjBjCJg.jpg" alt="" /><figcaption>img</figcaption>
 </figure></li>
 <li><p>dump：查看节点信息</p>
 <figure>
-<img src="../images/wps07KiEB-5228475.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wps07KiEB-5228475.jpg" alt="" /><figcaption>img</figcaption>
 </figure></li>
 <li><p>pingpair：验证前两个节点之间的连通性</p>
 <figure>
-<img src="../images/wpsYnZVCr.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsYnZVCr.jpg" alt="" /><figcaption>img</figcaption>
 </figure></li>
 <li><p>pingall：验证所有主机的连通性</p>
 <figure>
-<img src="../images/wpsz7jo2f.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsz7jo2f.jpg" alt="" /><figcaption>img</figcaption>
 </figure></li>
 <li><ol type="a">
 <li>help：查看帮助文档</li>
 </ol>
 <figure>
-<img src="../images/wpsmjkdFR.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsmjkdFR.jpg" alt="" /><figcaption>img</figcaption>
 </figure></li>
 <li><p>这行exit命令退出mininet</p></li>
 </ul>
@@ -81,11 +82,11 @@
 <p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mn --topo single,4</span><br></pre></td></tr></table></figure></p>
 <p>​ ② 查看结果：</p>
 <figure>
-<img src="../images/wpsuZN10y.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsuZN10y.jpg" alt="" /><figcaption>img</figcaption>
 </figure>
 <p>​ ③ 输入pingall测试节点连通性：</p>
 <figure>
-<img src="../images/wpslW9AFy.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpslW9AFy.jpg" alt="" /><figcaption>img</figcaption>
 </figure>
 <p>​ ④ 输入exit退出Mininet</p>
 <ol start="4" type="1">
@@ -95,11 +96,11 @@
 <p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mn --topo tree,depth&#x3D;2,fanout&#x3D;4</span><br></pre></td></tr></table></figure></p>
 <p>② 查看结果：</p>
 <figure>
-<img src="../images/wpsJ2B2N6.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsJ2B2N6.jpg" alt="" /><figcaption>img</figcaption>
 </figure>
 <p>③ 输入pingall测试节点连通性</p>
 <figure>
-<img src="../images/wpsGKN8tj.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsGKN8tj.jpg" alt="" /><figcaption>img</figcaption>
 </figure>
 <p>④ 输入exit退出Mininet</p></li>
 <li><p>使用Python脚本编写拓扑</p>
@@ -120,7 +121,7 @@
 <p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo ryu-manager  simple_switch.py</span><br></pre></td></tr></table></figure></p>
 <p>如出现下面提示，则说明ryu已正常运行。</p>
 <figure>
-<img src="../images/wpseoUZrN.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpseoUZrN.jpg" alt="" /><figcaption>img</figcaption>
 </figure>
 <p>（3）启动Mininet</p>
 <p>​ ① 进入mininet窗口</p>
@@ -128,11 +129,11 @@
 <p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mn --custom &#x2F;home&#x2F;zq&#x2F;B0199&#x2F;mytopo.py --topo mytopo --controller&#x3D;remote,ip&#x3D;127.0.0.1,port&#x3D;6633</span><br></pre></td></tr></table></figure></p>
 <p>​ ③ 输出结果：</p>
 <figure>
-<img src="../images/wpsWWlZvf.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsWWlZvf.jpg" alt="" /><figcaption>img</figcaption>
 </figure>
 <p>​ ④ 输入pingall测试节点连通性</p>
 <figure>
-<img src="../images/wpsS3uHBz.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsS3uHBz.jpg" alt="" /><figcaption>img</figcaption>
 </figure>
 <p>​ ⑤ 在mininet窗口使用exit退出Mininet</p>
 <p>​ ⑥ 在ryu窗口使用Ctrl+c退出ryu，并关闭该Cterm窗口</p></li>
@@ -148,7 +149,7 @@
 </ol>
 <p>​ ① 输入net查看当前链路连接</p>
 <figure>
-<img src="../images/wps2ZRKiN.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wps2ZRKiN.jpg" alt="" /><figcaption>img</figcaption>
 </figure>
 <p>​ ② 添加主机：</p>
 <p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mininet&gt;py net.addHo</span><br></pre></td></tr></table></figure></p>
@@ -158,16 +159,16 @@
 <p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mininet&gt; py net.addLink(s1,net.get(&quot;h3&quot;))</span><br></pre></td></tr></table></figure></p>
 <p>​ 出现以下提示：</p>
 <figure>
-<img src="../images/wpshWWbUL.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpshWWbUL.jpg" alt="" /><figcaption>img</figcaption>
 </figure>
 <p>​ ⑤ 给h3添加IP：</p>
 <p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mininet&gt; py net.get(&quot;h3&quot;).cmd(&quot;ifconfig h3-eth0 10.0.0.3&quot;)</span><br></pre></td></tr></table></figure></p>
 <p>​ ⑥ 查看验证：</p>
 <figure>
-<img src="../images/wpsnapNWv.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsnapNWv.jpg" alt="" /><figcaption>img</figcaption>
 </figure>
 <figure>
-<img src="../images/wpsFnl4WW.jpg" alt="" /><figcaption>img</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsFnl4WW.jpg" alt="" /><figcaption>img</figcaption>
 </figure>
 <p>⑦ exit退出Mininet</p>
 <p>## 实验二 流表应用</p></li>
