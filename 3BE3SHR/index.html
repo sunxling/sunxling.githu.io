@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="renderer" content="webkit">
+
+  
+  <title>SDN实验 | xling的博客</title>
+
+  <link rel="shortcut icon" href="/images/favicon.png">
+  <link rel="alternate" href="/atom.xml" title="xling的博客">
+  <meta name="description" content="写在正文之前： 同事的一个项目，有幸借此学习了一点新知识。 这个实验只是入门级，非常简单，仅限于熟悉SDN环境，了解基本命令，所以设计的傻瓜版。 目前网络上已经有了Web版，设计得更加丰富。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SDN实验">
+<meta property="og:url" content="http://sunxling.gitee.io/3BE3SHR/">
+<meta property="og:site_name" content="xling的博客">
+<meta property="og:description" content="写在正文之前： 同事的一个项目，有幸借此学习了一点新知识。 这个实验只是入门级，非常简单，仅限于熟悉SDN环境，了解基本命令，所以设计的傻瓜版。 目前网络上已经有了Web版，设计得更加丰富。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsMckMhk.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsZH5bqr.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsE2wjQf.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsjBjCJg.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wps07KiEB-5228475.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsYnZVCr.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsz7jo2f.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsmjkdFR.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsuZN10y.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpslW9AFy.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsJ2B2N6.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsGKN8tj.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpseoUZrN.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsWWlZvf.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsS3uHBz.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wps2ZRKiN.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpshWWbUL.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsnapNWv.jpg">
+<meta property="og:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsFnl4WW.jpg">
+<meta property="article:published_time" content="2020-03-26T12:59:06.837Z">
+<meta property="article:modified_time" content="2020-03-27T11:07:09.238Z">
+<meta property="article:author" content="sunxl">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://sunxling.gitee.io/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsMckMhk.jpg">
+
+  <meta name="format-detection" content="telephone=no,email=no">
+  <meta name="theme-color" content="#9C27B0">
+  <meta name="description" content="写在正文之前：
+同事的一个项目，有幸借此学习了一点新知识。
+这个实验只是入门级，非常简单，仅限于熟悉SDN环境，了解基本命令，所以设计的傻瓜版。
+目前网络上已经有了Web版，设计得更加丰富。">
+  <meta name="keywords" content="">
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="xling的博客">
+  <meta name="msapplication-starturl" content="http://sunxling.gitee.io/3BE3SHR/">
+  <meta name="msapplication-navbutton-color" content="#9C27B0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="xling的博客">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
+
+  
+    <meta property="article:published_time" content="Thu Mar 26 2020 20:59:06 GMT+0800">
+    <meta property="article:modified_time" content="Fri Mar 27 2020 19:07:09 GMT+0800">
+  
+
+  
+    <link rel="canonical" href="http://sunxling.gitee.io/3BE3SHR/">
+  
+
+  
+  
+
+  
+  
+  
+
+  
+<link rel="stylesheet" href="/css/mdui.css">
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+    <!-- live2d -->
+    <script src="https://cdn.jsdelivr.net/gh/sunxling/live2d-widget@latest/autoload.js"></script>
+
+<meta name="generator" content="Hexo 4.2.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container {
+  overflow: auto hidden;
+}
+
+mjx-container + br {
+  display: none;
+}
+</style><link rel="alternate" href="/atom.xml" title="xling的博客" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="xling的博客" type="application/rss+xml">
+<style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container {
+  overflow: auto hidden;
+}
+
+mjx-container + br {
+  display: none;
+}
+</style></head>
+
+<body class="mdui-appbar-with-toolbar mdui-drawer-body-left mdui-theme-primary-indigo mdui-theme-accent-pink">
+  <script>var a=localStorage.getItem("mdui-theme-layout-dark");if(a){document.getElementsByTagName("body")[0].className+=" mdui-theme-layout-dark"};</script>
+  <header id="header" class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide mdui-appbar-inset">
+  <div class="mdui-toolbar mdui-color-theme">
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="mdui-icon material-icons">menu</i></a>
+    <a href="/" class="mdui-typo-headline">xling的博客</a>
+    <div class="mdui-toolbar-spacer"></div>
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: '搜索'}"><i class="mdui-icon material-icons">search</i></a>
+    <a href="/atom.xml" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: 'RSS'}"><i class="mdui-icon material-icons">rss_feed</i></a>
+  </div>
+</header>
+<div class="mdui-dialog" id="search">
+  
+    <div class="search-form">
+      <input type="search" class="search-form-input" placeholder="Enter the key words">
+    </div>
+    <div class="search-result" data-resource="/search.xml"></div>
+  
+</div>
+  <aside id="sidebar" class="mdui-drawer mdui-drawer-full-height">
+  <div class="mdui-grid-tile">
+    <img src="/images/banner.png" style="height: 160px;">
+    <img src="/images/avatar.png" class="avatar-animation" style="position: absolute; top: 10%; left: 24px; width: 64px; height: 64px; border: 2px solid #fff; border-radius: 50%;">
+    <div class="mdui-grid-tile-actions">
+      <div class="mdui-grid-tile-text">
+        <div class="mdui-grid-tile-title">sunxl</div>
+        <div class="mdui-grid-tile-subtitle"><i class="mdui-icon material-icons">art_track</i></div>
+      </div>
+      
+        <div class="mdui-grid-tile-buttons">
+          <a href="mailto:xling_x@126.com" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: 'xling_x@126.com'}"><i class="mdui-icon material-icons">email</i></a>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="mdui-list" mdui-collapse="{accordion: true}">
+    <a href="/" class="mdui-list-item mdui-ripple">
+      <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-blue">home</i>
+      <div class="mdui-list-item-content">主页</div>
+    </a>
+    <div class="mdui-collapse-item">
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-deep-orange">inbox</i>
+        <div class="mdui-list-item-content">归档</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        <a class="mdui-ripple sidebar_archives-link" href="/archives/2020/03/">三月 2020<span class="mdui-ripple sidebar_archives-count">7</span></a>
+        
+      </div>
+    </div>
+    <div class="mdui-collapse-item">
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-green">chrome_reader_mode</i>
+        <div class="mdui-list-item-content">分类</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        <a class="mdui-ripple sidebar_archives-link" href="/categories/test/">test<span class="mdui-ripple sidebar_archives-count">1</span></a>
+        
+      </div>
+    </div>
+    <div class="mdui-collapse-item">
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-brown">bookmark</i>
+        <div class="mdui-list-item-content">标签</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+        <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+        <div class="widget-wrap">
+            <div id="myCanvasContainer" class="widget tagcloud">
+                <canvas width="250" height="250" id="resCanvas" style="width:100%">
+                    <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 10px;">笔记</a>
+                </canvas>
+            </div>
+        </div>
+        
+        
+        <a class="mdui-ripple sidebar_archives-link" href="/tags/hexo/" rel="tag">hexo<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag">笔记<span class="mdui-ripple sidebar_archives-count">1</span></a>
+        
+      </div>
+    </div>
+    <a href="/about" class="mdui-list-item mdui-ripple">
+      <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-purple">person</i>
+      <div class="mdui-list-item-content">关于</div>
+    </a>
+  </div>
+
+  <div class="mdui-divider"></div>
+
+  <div class="mdui-list" mdui-collapse="{accordion: true}">
+    
+      <a href="/%E6%A0%87%E7%AD%BE%E4%BA%91" class="mdui-list-item mdui-ripple">标签云</a>
+    
+      <a href="/gallery" class="mdui-list-item mdui-ripple">Gallery</a>
+    
+    <div class="mdui-collapse-item">
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <div class="mdui-list-item-content">友情链接</div>
+        <i class="mdui-list-item-icon mdui-icon material-icons">link</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+          <a href="https://github.com" target="_blank" class="mdui-list-item mdui-ripple mdui-p-l-2 mdui-text-color-theme-accent" style="justify-content: center;">Github</a>
+        
+        
+      </div>
+    </div>
+  </div>
+</aside>
+
+  <main id="main" class="mdui-m-t-5 fadeIn animated">
+  
+<link rel="stylesheet" href="https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  <style>#main article .mdui-card-content .center-block{display:block!important;margin-right:auto!important;margin-left:auto!important}</style>
+  <article class="mdui-card mdui-m-b-5">
+    <header class="mdui-card-media">
+      <img src="/images/random/material-9.png" style="max-height: 240px;">
+      <div class="mdui-card-media-covered">
+        <div class="mdui-card-primary">
+          <div class="mdui-card-primary-title">SDN实验</div>
+          <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2020-03-26 / <i class="iconfont">&#xe601;</i> sunxl</div>
+        </div>
+      </div>
+      <div class="mdui-card-menu">
+        
+          <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-menu="{target: '#qrcode', align: 'right'}"><i class="mdui-icon material-icons">devices</i></button>
+          <ul class="mdui-menu" id="qrcode">
+            
+              <li class="mdui-menu-item"><a class="mdui-text-center mdui-ripple">Send to mobile phone</a></li>
+            
+            <li class="mdui-menu-item" disabled>
+              
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAAB4klEQVR42u3awXLCMAwEUP7/p9trL6QrKS1J9HxiGIj9OCyW5dfXI8YLAwMDAwMDA+MyjFc8fn7++HX+5N4aMDAwdjJ+ibbDKd99PkH21oCBgbGZkYRssty3ERkHd/RDYGBgYBSnPA7KavhiYGBgnPCIuJStwjAwMDDmRWzv/fwI759qcQwMjBsyzm0M9F5frr+BgYFxGUb5ikPcgDz+1ofvjGBgYNyKcXx8Nj+Aq5bE+aEeBgbGTsZkA3cczdVxQi2OgYHxOEYvavOQrV7aSDaUGBgY2xi9bWLSAJhEcPN/AwMD43GMHilvZ/aO26IZMTAw1jCq27JkK5kUtPOfAAMDYw8jPyarthPyKG+uAQMDYxkjbytWN4i9CI6egIGBsYaRFJa9Q//5tzAwMDCSKXtNx7ysnUQ8BgbGHkYyTbWR2St0T2gMYGBgPJSRjxyQHKsl184wMDAwkiXml7d6sN61ewwMjJ2Mauweb/gmYVq40oqBgbGGMQ/W6vFcwovAGBgYyxjVkK0CqoEbNSEwMDBWMpJArAZodRNZaDxgYGBgDFqYk5ZnHtAYGBgY1SKzegks3xRiYGBgTCbotR6rofwnx20YGBg3ZMwbA9XLZEnRi4GBgXH3gYGBgYGBgYHx0fEN3A7uA6w7XiwAAAAASUVORK5CYII=">
+              
+            </li>
+          </ul>
+        
+        
+          <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="mdui-icon material-icons">share</i></button>
+          <ul class="mdui-menu" id="share_menu">
+            <li class="mdui-menu-item">
+              <a href="http://service.weibo.com/share/share.php?appkey=&title=SDN实验&url=http://sunxling.gitee.io/3BE3SHR/&pic=http://sunxling.gitee.io/images/favicon.png&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到微博</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://twitter.com/intent/tweet?text=SDN实验&url=http://sunxling.gitee.io/3BE3SHR/&via=sunxl" target="_blank" class="mdui-ripple">分享到Twitter</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=http://sunxling.gitee.io/3BE3SHR/" target="_blank" class="mdui-ripple">分享到Facebook</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://plus.google.com/share?url=http://sunxling.gitee.io/3BE3SHR/" target="_blank" class="mdui-ripple">分享到Google+</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://sunxling.gitee.io/3BE3SHR/&title=SDN实验" target="_blank" class="mdui-ripple">分享到LinkedIn</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="http://connect.qq.com/widget/shareqq/index.html?site=xling的博客&title=SDN实验&summary=Communication Network notes&pics=http://sunxling.gitee.io/images/favicon.png&url=http://sunxling.gitee.io/3BE3SHR/" target="_blank" class="mdui-ripple">分享到QQ</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://telegram.me/share/url?url=http://sunxling.gitee.io/3BE3SHR/&text=SDN实验" target="_blank" class="mdui-ripple">分享到Telegram</a>
+            </li>
+          </ul>
+        
+      </div>
+    </header>
+    <div class="mdui-card-content mdui-typo">
+        
+            <p>写在正文之前：</p>
+<p>同事的一个项目，有幸借此学习了一点新知识。</p>
+<p>这个实验只是入门级，非常简单，仅限于熟悉SDN环境，了解基本命令，所以设计的傻瓜版。</p>
+<p>目前网络上已经有了Web版，设计得更加丰富。</p>
+<a id="more"></a>
+<h2 id="实验一-mininet搭建自定义网络">实验一 Mininet搭建自定义网络</h2>
+<h3 id="实验目的">实验目的</h3>
+<p>熟悉并掌握Mininet和Ryu的启动方式，熟悉Pycharm编辑器的使用，使用Mininet自定义拓扑三种实现方式：命令行创建、Python脚本编写、交互式界面创建。</p>
+<h3 id="实验内容">实验内容</h3>
+<p>使用PyCharm、Mininet和Ryu实现：</p>
+<ol type="1">
+<li>命令行创建自定义拓扑</li>
+<li>Python脚本编写自定义拓扑</li>
+<li>交互式界面创建自定义拓扑</li>
+</ol>
+<h3 id="实验环境">实验环境</h3>
+<p>电脑一台，Windows系统，其中安装：</p>
+<ol type="1">
+<li><p>VMware workstation中挂载Ubuntu16.04系统</p></li>
+<li><p>Ubuntu系统中安装以下软件：</p>
+<ul>
+<li><p>PyCharm</p></li>
+<li><p>网络仿真软件Mininet</p></li>
+<li><p>控制器Ryu</p></li>
+</ul></li>
+</ol>
+<h3 id="实验步骤">实验步骤</h3>
+<ol type="1">
+<li><p>登录系统</p>
+<p>打开VMware workstation，启动虚拟机RYU，登录用户名为：ZQ，密码为：1994。</p></li>
+<li><p>命令行创建拓扑</p>
+<p>（1）使用快捷键Ctrl+Alt+t打开一个Term窗口，此窗口在下文中称为mininet窗口。</p>
+<p>（2）创建线形拓扑：每个交换机连接一个主机，交换机间相连接。本例：4个主机，4个交换机。</p>
+<p>​ ① 输入命令：</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mn --topo linear,4</span><br></pre></td></tr></table></figure></p>
+<p>​ ② 输出结果：</p>
+<figure>
+<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsMckMhk.jpg" alt="" /><figcaption>img</figcaption>
+</figure>
+<p>​ 可在mininet&gt;后输入一些命令，查看创建的拓扑情况</p>
+<ul>
+<li><p>nodes：查看网络中的节点</p>
+<figure>
+<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsZH5bqr.jpg" alt="" /><figcaption>img</figcaption>
+</figure></li>
+<li><p>net：查看链接信息</p>
+<figure>
+<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsE2wjQf.jpg" alt="" /><figcaption>img</figcaption>
+</figure></li>
+<li><p>links：查看链路的健壮性（链路状态）</p>
+<figure>
+<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsjBjCJg.jpg" alt="" /><figcaption>img</figcaption>
+</figure></li>
+<li><p>dump：查看节点信息</p>
+<figure>
+<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wps07KiEB-5228475.jpg" alt="" /><figcaption>img</figcaption>
+</figure></li>
+<li><p>pingpair：验证前两个节点之间的连通性</p>
+<figure>
+<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsYnZVCr.jpg" alt="" /><figcaption>img</figcaption>
+</figure></li>
+<li><p>pingall：验证所有主机的连通性</p>
+<figure>
+<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsz7jo2f.jpg" alt="" /><figcaption>img</figcaption>
+</figure></li>
+<li><ol type="a">
+<li>help：查看帮助文档</li>
+</ol>
+<figure>
+<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsmjkdFR.jpg" alt="" /><figcaption>img</figcaption>
+</figure></li>
+<li><p>这行exit命令退出mininet</p></li>
+</ul>
+<p>（3）创建星型拓扑：每个主机都连接到同一个交换机上。本例：4个主机，一个交换机。</p>
+<p>​ ① 输入命令：</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mn --topo single,4</span><br></pre></td></tr></table></figure></p>
+<p>​ ② 查看结果：</p>
+<figure>
+<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsuZN10y.jpg" alt="" /><figcaption>img</figcaption>
+</figure>
+<p>​ ③ 输入pingall测试节点连通性：</p>
+<figure>
+<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpslW9AFy.jpg" alt="" /><figcaption>img</figcaption>
+</figure>
+<p>​ ④ 输入exit退出Mininet</p>
+<ol start="4" type="1">
+<li>树形拓扑：定义深度和扇出形成基于树的拓扑。本例：深度2，扇出4。</li>
+</ol>
+<p>① 输入命令：</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mn --topo tree,depth&#x3D;2,fanout&#x3D;4</span><br></pre></td></tr></table></figure></p>
+<p>② 查看结果：</p>
+<figure>
+<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsJ2B2N6.jpg" alt="" /><figcaption>img</figcaption>
+</figure>
+<p>③ 输入pingall测试节点连通性</p>
+<figure>
+<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsGKN8tj.jpg" alt="" /><figcaption>img</figcaption>
+</figure>
+<p>④ 输入exit退出Mininet</p></li>
+<li><p>使用Python脚本编写拓扑</p>
+<p>（1）编写拓扑，本例为网络拓扑为：两个交换机s1、s2，每个交换机下连接2台主机，共4台主机。</p>
+<p>① 启动PyCharm</p>
+<p>② 新建项目，起名为自己的学号，如B0199，放在/home/zq/B0199目录下</p>
+<p>③ 右键点击左侧Project框中B0199，选择New-&gt;Python File，建立一个Python文件，名为：mytopo.py</p>
+<p>④ 选择python解释器为Python2.7版本：File--&gt;Default Settings--&gt;Project Interpreter</p>
+<p>⑤ 在文件中输入下列代码</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">from mininet.net import Mininet</span><br><span class="line">from mininet.topo import Topo</span><br><span class="line">from mininet.node import RemoteController, CPULimitedHost</span><br><span class="line">from mininet.link import TCLink</span><br><span class="line">from mininet.util import dumpNodeConnections</span><br><span class="line"></span><br><span class="line">class MyTopo(Topo):</span><br><span class="line">  &quot;Simple topology example.&quot;</span><br><span class="line"></span><br><span class="line">  def __init__(self):</span><br><span class="line">  	&quot;Create custom topo.&quot;</span><br><span class="line"></span><br><span class="line">		# Initialize topology</span><br><span class="line">		Topo.__init__(self)</span><br><span class="line"></span><br><span class="line">		# Add hosts and switches</span><br><span class="line">		h2 &#x3D; self.addHost(&#39;h2&#39;)</span><br><span class="line">		h3 &#x3D; self.addHost(&#39;h3&#39;)</span><br><span class="line">		h4 &#x3D; self.addHost(&#39;h4&#39;)</span><br><span class="line">		s1 &#x3D; self.addSwitch(&#39;s1&#39;)</span><br><span class="line">		s2 &#x3D; self.addSwitch(&#39;s2&#39;)</span><br><span class="line">		</span><br><span class="line">		# Add links</span><br><span class="line">		self.addLink(s1,s2,1,1)</span><br><span class="line">		self.addLink(s1,h1,2,1)</span><br><span class="line">		self.addLink(s1,h2,3,1)</span><br><span class="line">		self.addLink(s2,h4,3,1)</span><br><span class="line"></span><br><span class="line">topos &#x3D; &#123;&quot;mytopo&quot;: (lambda: MyTopo())&#125;</span><br></pre></td></tr></table></figure></p>
+<p>⑥ 运行成功后保存。</p>
+<p>如出现找不到mininet模块错误，则加入import sys和sys.path.append('/home/zq/mininet')两行代码即可，其中路径可根据具体mininet安装目录修改。</p>
+<p>（2）启动ryu</p>
+<p>​ ① 使用快捷键Ctrl+Alt+t打开一个Term窗口，此窗口在下文中称为ryu窗口。</p>
+<p>​ ② 进入ryu安装目录下子目录：</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ryu&#x2F;build&#x2F;lib.linux-x86_64-2.7&#x2F;ryu&#x2F;app</span><br></pre></td></tr></table></figure></p>
+<p>​ ③ 输入命令：</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ryu-manager  simple_switch.py</span><br></pre></td></tr></table></figure></p>
+<p>如出现下面提示，则说明ryu已正常运行。</p>
+<figure>
+<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpseoUZrN.jpg" alt="" /><figcaption>img</figcaption>
+</figure>
+<p>（3）启动Mininet</p>
+<p>​ ① 进入mininet窗口</p>
+<p>​ ② 执行命令：</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mn --custom &#x2F;home&#x2F;zq&#x2F;B0199&#x2F;mytopo.py --topo mytopo --controller&#x3D;remote,ip&#x3D;127.0.0.1,port&#x3D;6633</span><br></pre></td></tr></table></figure></p>
+<p>​ ③ 输出结果：</p>
+<figure>
+<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsWWlZvf.jpg" alt="" /><figcaption>img</figcaption>
+</figure>
+<p>​ ④ 输入pingall测试节点连通性</p>
+<figure>
+<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsS3uHBz.jpg" alt="" /><figcaption>img</figcaption>
+</figure>
+<p>​ ⑤ 在mininet窗口使用exit退出Mininet</p>
+<p>​ ⑥ 在ryu窗口使用Ctrl+c退出ryu，并关闭该Cterm窗口</p></li>
+<li><p>使用交互式界面创建拓扑</p>
+<ol type="1">
+<li>启动Mininet</li>
+</ol>
+<p>​ ① 进入mininet窗口</p>
+<p>​ ② 输入</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mn</span><br></pre></td></tr></table></figure></p>
+<ol start="2" type="1">
+<li>增加一个节点h3</li>
+</ol>
+<p>​ ① 输入net查看当前链路连接</p>
+<figure>
+<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wps2ZRKiN.jpg" alt="" /><figcaption>img</figcaption>
+</figure>
+<p>​ ② 添加主机：</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mininet&gt;py net.addHo</span><br></pre></td></tr></table></figure></p>
+<p>​ ③ 给交换机s1添加端口eth3：</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mininet&gt;  py s1.attach(&quot;s1-eth3&quot;)</span><br></pre></td></tr></table></figure></p>
+<p>​ ④ 添加链路：</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mininet&gt; py net.addLink(s1,net.get(&quot;h3&quot;))</span><br></pre></td></tr></table></figure></p>
+<p>​ 出现以下提示：</p>
+<figure>
+<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpshWWbUL.jpg" alt="" /><figcaption>img</figcaption>
+</figure>
+<p>​ ⑤ 给h3添加IP：</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mininet&gt; py net.get(&quot;h3&quot;).cmd(&quot;ifconfig h3-eth0 10.0.0.3&quot;)</span><br></pre></td></tr></table></figure></p>
+<p>​ ⑥ 查看验证：</p>
+<figure>
+<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsnapNWv.jpg" alt="" /><figcaption>img</figcaption>
+</figure>
+<figure>
+<img src="/Users/sunxl/Documents/sunxling.gitlab.io/source/images/wpsFnl4WW.jpg" alt="" /><figcaption>img</figcaption>
+</figure>
+<p>⑦ exit退出Mininet</p></li>
+</ol>
+
+        
+      <blockquote class="mdui-m-t-5">
+        
+        <strong>本文链接：</strong><a href="http://sunxling.gitee.io/3BE3SHR/">http://sunxling.gitee.io/3BE3SHR/</a>
+      </blockquote>
+      
+    </div>
+    <footer class="mdui-card-actions">
+      
+      
+    </footer>
+    
+  </article>
+  
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+  <script>$("#main article .mdui-card-content img.fancybox").on("click",function(e){$.fancybox.open({src:$(this).attr("src")});});</script>
+
+
+  <nav id="paginator">
+    
+    <div class="spacer"></div>
+    
+      <a rel="next" class="extend next" href="/VS80WG/">
+        下一篇&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button aria-label="next" class="mdui-btn mdui-btn-raised mdui-btn-dense mdui-btn-icon mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_forward</i></button>
+      </a>
+    
+  </nav>
+
+
+  <div id="comment" class="mdui-m-t-5">
+    <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+    clientID: 'ae77d4312c9ca39aa834',
+    clientSecret: 'b1c687127b639f792fdfe176de52f6970594703a',
+    repo: 'sunxling.github.io',
+    owner: 'sunxling',
+    admin: ['sunxling'],
+    id: location.pathname,
+    distractionFreeMode: false
+  });
+  gitalk.render('gitalk-container');
+</script>
+  </div>
+
+
+
+</main>
+  <footer id="footer" class="mdui-m-t-5 mdui-p-y-3 mdui-color-theme">
+  <div class="mdui-p-y-0 mdui-text-center">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </div>
+  <div class="mdui-p-y-1 mdui-text-center">
+    Copyright &copy; 2019 - 2020 sunxl<br>
+    Powered by <a href="https://hexo.io/" target="_blank" class="mdui-text-color-theme-accent">Hexo</a>
+    
+  </div>
+</footer>
+  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">arrow_upward</i></button>
+  
+  
+<script src="/js/mdui.js"></script>
+<script src="/js/script.js"></script>
+
+</body>
+</html>
