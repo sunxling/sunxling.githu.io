@@ -45,54 +45,34 @@
 <p>​ ① 输入命令：</p>
 <p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mn --topo linear,4</span><br></pre></td></tr></table></figure></p>
 <p>​ ② 输出结果：</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsMckMhk.jpg" alt=""><figcaption>img</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsMckMhk.jpg"></p>
 <p>​ 可在mininet&gt;后输入一些命令，查看创建的拓扑情况</p>
 <ul>
 <li><p>nodes：查看网络中的节点</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsZH5bqr.jpg" alt=""><figcaption>img</figcaption>
-</figure></li>
+<p><img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsZH5bqr.jpg"></p></li>
 <li><p>net：查看链接信息</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsE2wjQf.jpg" alt=""><figcaption>img</figcaption>
-</figure></li>
+<p><img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsE2wjQf.jpg"></p></li>
 <li><p>links：查看链路的健壮性（链路状态）</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsjBjCJg.jpg" alt=""><figcaption>img</figcaption>
-</figure></li>
+<p><img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsjBjCJg.jpg"></p></li>
 <li><p>dump：查看节点信息</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wps07KiEB-5228475.jpg" alt=""><figcaption>img</figcaption>
-</figure></li>
+<p><img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wps07KiEB-5228475.jpg"></p></li>
 <li><p>pingpair：验证前两个节点之间的连通性</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsYnZVCr.jpg" alt=""><figcaption>img</figcaption>
-</figure></li>
+<p><img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsYnZVCr.jpg"></p></li>
 <li><p>pingall：验证所有主机的连通性</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsz7jo2f.jpg" alt=""><figcaption>img</figcaption>
-</figure></li>
+<p><img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsz7jo2f.jpg"></p></li>
 <li><ol type="a">
 <li>help：查看帮助文档</li>
 </ol>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsmjkdFR.jpg" alt=""><figcaption>img</figcaption>
-</figure></li>
-<li><p>这行exit命令退出mininet</p></li>
+<p><img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsmjkdFR.jpg"></p></li>
+<li><p>运行exit命令退出mininet</p></li>
 </ul>
 <p>（3）创建星型拓扑：每个主机都连接到同一个交换机上。本例：4个主机，一个交换机。</p>
 <p>​ ① 输入命令：</p>
 <p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mn --topo single,4</span><br></pre></td></tr></table></figure></p>
 <p>​ ② 查看结果：</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsuZN10y.jpg" alt=""><figcaption>img</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsuZN10y.jpg"></p>
 <p>​ ③ 输入pingall测试节点连通性：</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpslW9AFy.jpg" alt=""><figcaption>img</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpslW9AFy.jpg"></p>
 <p>​ ④ 输入exit退出Mininet</p>
 <ol start="4" type="1">
 <li>树形拓扑：定义深度和扇出形成基于树的拓扑。本例：深度2，扇出4。</li>
@@ -100,13 +80,9 @@
 <p>① 输入命令：</p>
 <p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mn --topo tree,depth=2,fanout=4</span><br></pre></td></tr></table></figure></p>
 <p>② 查看结果：</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsJ2B2N6.jpg" alt=""><figcaption>img</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsJ2B2N6.jpg"></p>
 <p>③ 输入pingall测试节点连通性</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsGKN8tj.jpg" alt=""><figcaption>img</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsGKN8tj.jpg"></p>
 <p>④ 输入exit退出Mininet</p></li>
 <li><p>使用Python脚本编写拓扑</p>
 <p>（1）编写拓扑，本例为网络拓扑为：两个交换机s1、s2，每个交换机下连接2台主机，共4台主机。</p>
@@ -125,21 +101,15 @@
 <p>​ ③ 输入命令：</p>
 <p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo ryu-manager  simple_switch.py</span><br></pre></td></tr></table></figure></p>
 <p>如出现下面提示，则说明ryu已正常运行。</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpseoUZrN.jpg" alt=""><figcaption>img</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpseoUZrN.jpg"></p>
 <p>（3）启动Mininet</p>
 <p>​ ① 进入mininet窗口</p>
 <p>​ ② 执行命令：</p>
 <p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo mn --custom /home/zq/B0199/mytopo.py --topo mytopo --controller=remote,ip=127.0.0.1,port=6633</span><br></pre></td></tr></table></figure></p>
 <p>​ ③ 输出结果：</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsWWlZvf.jpg" alt=""><figcaption>img</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsWWlZvf.jpg"></p>
 <p>​ ④ 输入pingall测试节点连通性</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsS3uHBz.jpg" alt=""><figcaption>img</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsS3uHBz.jpg"></p>
 <p>​ ⑤ 在mininet窗口使用exit退出Mininet</p>
 <p>​ ⑥ 在ryu窗口使用Ctrl+c退出ryu，并关闭该Cterm窗口</p></li>
 <li><p>使用交互式界面创建拓扑</p>
@@ -153,9 +123,7 @@
 <li>增加一个节点h3</li>
 </ol>
 <p>​ ① 输入net查看当前链路连接</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wps2ZRKiN.jpg" alt=""><figcaption>img</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wps2ZRKiN.jpg"></p>
 <p>​ ② 添加主机：</p>
 <p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mininet&gt;py net.addHo</span><br></pre></td></tr></table></figure></p>
 <p>​ ③ 给交换机s1添加端口eth3：</p>
@@ -163,18 +131,12 @@
 <p>​ ④ 添加链路：</p>
 <p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mininet&gt; py net.addLink(s1,net.get("h3"))</span><br></pre></td></tr></table></figure></p>
 <p>​ 出现以下提示：</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpshWWbUL.jpg" alt=""><figcaption>img</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpshWWbUL.jpg"></p>
 <p>​ ⑤ 给h3添加IP：</p>
 <p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mininet&gt; py net.get("h3").cmd("ifconfig h3-eth0 10.0.0.3")</span><br></pre></td></tr></table></figure></p>
 <p>​ ⑥ 查看验证：</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsnapNWv.jpg" alt=""><figcaption>img</figcaption>
-</figure>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsFnl4WW.jpg" alt=""><figcaption>img</figcaption>
-</figure>
+<p><img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsnapNWv.jpg"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/sunxling/sunxling.github.io@master/images/wpsFnl4WW.jpg"></p>
 <p>⑦ exit退出Mininet</p>
 <p>## 实验二 流表应用</p></li>
 </ol>
